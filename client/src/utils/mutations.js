@@ -28,6 +28,40 @@ export const ADD_ORDER = gql`
     }
   }
 `
+export const ADD_PRODUCT = gql`
+  mutation addProduct(
+    $name: String!
+    $description: String!
+    $image: String!
+    $price: Int!
+    $quantity: Int!
+    $category: ID!
+  ) {
+    addProduct(
+      description: $description
+      image: $image
+      price: $price
+      quantity: $quantity
+      category: $category
+    )
+  }
+`
+export const EDIT_PRODUCT = gql`
+mutation editProduct(name: String
+    $description: String
+    $image: String
+    $price: Int
+    $quantity: Int
+    $category: ID!
+    ) {
+        editProduct(
+            description: $description
+            image: $image
+            price: $price
+            quantity: $quantity
+            category: $category
+        )
+    }`
 
 export const ADD_USER = gql`
   mutation addUser(

@@ -47,11 +47,11 @@ export const ADD_PRODUCT = gql`
   }
 `
 export const EDIT_PRODUCT = gql`
-mutation editProduct(name: String
-    $description: String
+mutation editProduct(name: String!
+    $description: String!
     $image: String
-    $price: Int
-    $quantity: Int
+    $price: Int!
+    $quantity: Int!
     $category: ID!
     ) {
         editProduct(

@@ -1,7 +1,8 @@
 import './App.css';
 import { createContext, useState } from 'react'
 import ReactSwitch from 'react-switch';
-
+import { NavBar } from "./components/NavBar"
+import { SideBar } from "./components/SideBar"
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>  
     <div id={theme}>
+      <NavBar />
+      <SideBar />
       <div className='switch'>
         <label> {theme === 'light' ? 'Light Mode' : 'Dark Mode'} </label>
         <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>

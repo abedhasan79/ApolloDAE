@@ -94,10 +94,10 @@ const resolvers = {
       const product = await Product.create(args);
       return product;
     },
-    editProduct: async (parent, { _id, name, description, image, price, quantity, categoryId }) => {
+    editProduct: async (parent, { _id, name, description, price, quantity }) => {
       return await Product.findByIdAndUpdate(
         _id,
-        { $addToSet: { name: name, description: description, image: image, price: price, quantity: quantity, categoryId: categoryId } },
+        { $set: { name: name, description: description,  price: price, quantity: quantity } },
         { new: true },
       );
     },

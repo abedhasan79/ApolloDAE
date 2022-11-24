@@ -90,6 +90,17 @@ const resolvers = {
     }
   },
   Mutation: {
+    addProduct: async (parent, args) => {
+      const product = await Product.create(args);
+      return product;
+    },
+    editProduct: async (parent, { _id, name, description, price, quantity }) => {
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $set: { name: name, description: description,  price: price, quantity: quantity } },
+        { new: true },
+      );
+    },
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);

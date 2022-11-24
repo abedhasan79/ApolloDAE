@@ -5,6 +5,13 @@ import { ADD_PRODUCT } from "../utils/mutations";
 import { QUERY_PRODUCTS } from "../utils/queries";
 
 import Auth from '../utils/auth';
+
+const style = {
+  hw: {
+    marginTop: '30vh'
+  }
+}
+
 const Admin = () => {
     const [formState, setFormState] = useState({ name: '', description: '', price: '', quantity: '', category: '' });
     const [addProduct, { error }] = useMutation(ADD_PRODUCT, {
@@ -46,8 +53,18 @@ const Admin = () => {
     };
 
     return (
-        <div className="container">
-            welcome to admin
+        <div className="container" style={style.hw}>
+            welcome to 
+            adminasfdsajflksajflsafasf
+
+adminasfdsajflksajflsafasf
+adminasfdsajflksajflsafasf
+
+adminasfdsajflksajflsafasf
+
+adminasfdsajflksajflsafasf
+
+
             <div>
                 <form onSubmit={handleFormSubmit}>
                     <input

@@ -1,21 +1,16 @@
 import React from "react";
-import {Banner} from '../components/Banner'
+import ProductList from "../components/ProductList";
+import CategoryMenu from "../components/CategoryMenu";
+import Cart from "../components/Cart";
 
-const style={
-    hw:{
-        marginTop: '30vh'
-    }
-}
 const Home = () => {
-    return (
-      <div>  
-        <div style={style.hw}>
-      <Banner />
-      </div>
-      </div>
-      
-    );
-  };
-  
-  export default Home;
-  
+  return (
+    <div className="container">
+      <CategoryMenu />
+      <ProductList />
+      <Cart />
+    </div>
+  );
+};
+
+export default Home;

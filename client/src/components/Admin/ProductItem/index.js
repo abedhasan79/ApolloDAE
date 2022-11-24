@@ -27,7 +27,7 @@ function ProductItem(item) {
         <p className="prodName">{name}</p>
       </Link>
       <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
+        <div className="inStock">{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>
       

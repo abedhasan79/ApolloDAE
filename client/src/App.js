@@ -5,23 +5,20 @@ import Home from './pages/Home';
 import { NavBar } from "./components/NavBar"
 import { SideBar } from "./components/SideBar"
 
-
-
 export const ThemeContext = createContext(null);
 
 
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-  //toggles the theme when it is called
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  }
+  // const [theme, setTheme] = useState('dark');
+  // //toggles the theme when it is called
+  // const toggleTheme = () => {
+  //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
+  // }
   return (
 
     <Router>
       <div>
-
         <NavBar />
         <SideBar />
         <Routes>

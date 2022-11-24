@@ -7,7 +7,8 @@ const style={
 }
 const Home = () => {
     return (
-      <div style={style.hw}>
+      <div>
+        <NavBar/>
         Hello World
       </div>
     );

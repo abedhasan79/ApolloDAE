@@ -1,9 +1,14 @@
 import './App.css';
 import { createContext, useState } from 'react'
-import ReactSwitch from 'react-switch';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+import Home from './pages/Home';
 import { SideBar } from "./components/SideBar"
 import { NavBar } from "./components/NavBar"
 export const ThemeContext = createContext(null);
+
+
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -12,12 +17,23 @@ function App() {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
   }
   return (
-    <div>
-      <NavBar />
-      <SideBar />
-    </div>
 
-    
+    <Router>
+      <div>
+
+        <NavBar />
+        <SideBar />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+        </Routes>
+
+      </div>
+    </Router>
+
+
     // <ThemeContext.Provider value={{ theme, toggleTheme }}>  
     // <div id={theme}>
     //   <div className='switch'>

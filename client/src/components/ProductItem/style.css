@@ -20,7 +20,7 @@
     outline: 0;
     grid-gap: 8px;
     align-items: center;
-    background-color: #ff90e8;
+    background-color: rgb(59, 189, 249);
     color: #000;
     border: 1px solid #000;
     border-radius: 4px;
@@ -37,13 +37,14 @@
     text-overflow: ellipsis;
     transition: all .14s ease-out;
     white-space: nowrap;
+
    
 
 }
 
 .a:hover{
    
-        box-shadow: 4px 4px 0 #000;
+        box-shadow: 6px 6px 0 rgb(238, 104, 238);
         transform: translate(-4px,-4px);
     }
     :focus-visible{

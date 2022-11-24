@@ -43,7 +43,7 @@ code {
 /**************/
 .dark-mode{
   --primary: #9b9ba2;
-  --bg-color: #2b2a33;
+  --bg-color: #2d2d2f;
   --bg-form: #42414d;
   --shadow:  rgb(9, 27, 36);
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import {Banner} from '../components/Banner'
+
 
 const style={
     hw:{
@@ -8,7 +10,7 @@ const style={
 const Home = () => {
     return (
       <div style={style.hw}>
-        Hello World
+        <Banner />
       </div>
     );
   };

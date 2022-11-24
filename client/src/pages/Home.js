@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../components/NavBar"
+import {NavBar} from "../components/NavBar"
 const style={
     hw:{
         marginTop: '20vh'

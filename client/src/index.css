@@ -69,7 +69,7 @@ html,body{
   background: var(--bg-color);
 }
 .theme-switch{
-  position: absolute;
+  position: fixed;
   top: 33px;
   left: 17px;
   display: flex;

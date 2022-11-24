@@ -1,6 +1,6 @@
 import React from 'react'
 import { Login } from './Login'
-
+//
 export const NavBar = () => {
   let Links =[
     {name: "Home", link:"/"},

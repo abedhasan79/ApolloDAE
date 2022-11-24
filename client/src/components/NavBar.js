@@ -12,7 +12,7 @@ export const NavBar = () => {
     <div className='shadow-md w-full fixed top-0 left-0'>
       <div className='md:flex items-center bg-white py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
-          ApolloDAE
+          Apollo<span class="text-blue-400">D</span><span class="text-purple-500">A</span><span class="text-fuchsia-300">E</span>
         </div>
         <ul className='md:flex md:items-center'>
           {

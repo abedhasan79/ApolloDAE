@@ -4,12 +4,12 @@ import { useState } from 'react'
 export const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const Categories = [ 
-    {name: "Electronics"},
-    {name: "Toys"},
-    {name: "Clothes"},
-    {name: "Snacks"},
-    {name: "Video Games"},
-    {name: "Household Supplies"},
+    {name: "Electronics", link:"/"},
+    {name: "Toys", link:"/"},
+    {name: "Clothes", link:"/"},
+    {name: "Snacks", link:"/"},
+    {name: "Video Games", link:"/"},
+    {name: "Household Supplies", link:"/"},
   ]
 
   return (
@@ -38,10 +38,12 @@ export const SideBar = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } ease-in-out duration-300`}
       >
-        <h2 className='text-2xl text-white'>SideBar</h2>
+        <h2 className='text-2xl text-white'>Categories</h2>
         <ul>
-            {Categories.map((category, index) => (
-                <li key={index} className="text-gray-300 text-sm">{category.name}</li>
+            {Categories.map((category) => (
+                <li key={category.name} className="text-gray-300 text-sm">
+                    <a href={category.link} className='text-red-800 hover:text-blue-400 duration-500'>{category.name}</a>
+                    </li>
             ))}
         </ul>
       </div>

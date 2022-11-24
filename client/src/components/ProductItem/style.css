@@ -3,6 +3,7 @@
     padding: 20px;
     border: 1px solid #c9c9c9;
     line-height: 40px;
+    margin-bottom: 10px;
    
 }
 
@@ -20,7 +21,7 @@
     outline: 0;
     grid-gap: 8px;
     align-items: center;
-    background-color: rgb(59, 189, 249);
+    background-color: rgb(250, 59, 59);
     color: #000;
     border: 1px solid #000;
     border-radius: 4px;

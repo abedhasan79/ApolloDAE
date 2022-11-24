@@ -1,27 +1,25 @@
 import './App.css';
 import { createContext, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
 import Home from './pages/Home';
+import { NavBar } from "./components/NavBar"
 import { SideBar } from "./components/SideBar"
-// import { NavBar } from "./components/NavBar"
+
 export const ThemeContext = createContext(null);
 
 
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-  //toggles the theme when it is called
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  }
+  // const [theme, setTheme] = useState('dark');
+  // //toggles the theme when it is called
+  // const toggleTheme = () => {
+  //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
+  // }
   return (
 
     <Router>
       <div>
-
-        {/* <NavBar /> */}
+        <NavBar />
         <SideBar />
         <Routes>
           <Route

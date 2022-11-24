@@ -1,16 +1,19 @@
 import React from "react";
-import {NavBar} from "../components/NavBar"
+import {Banner} from '../components/Banner'
+
 const style={
     hw:{
-        marginTop: '20vh'
+        marginTop: '30vh'
     }
 }
 const Home = () => {
     return (
-      <div>
-        <NavBar/>
-        Hello World
+      <div>  
+        <div style={style.hw}>
+      <Banner />
       </div>
+      </div>
+      
     );
   };
   

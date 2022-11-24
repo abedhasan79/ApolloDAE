@@ -1,11 +1,12 @@
 import React from 'react'
+import { Login } from './Login'
 
 export const NavBar = () => {
   let Links =[
     {name: "Home", link:"/"},
-    {name: "Contact", link:"/"},
-    {name: "Login", link:"/"},
-    {name: "Cart", link:"/"},
+    {name: "Contact"},
+    {name: <Login />},
+    {name: "Cart"},
   ]
 
   return (

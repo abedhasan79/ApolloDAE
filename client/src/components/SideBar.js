@@ -1,18 +1,50 @@
 import React from 'react'
-import Control from "../img/control.png"
-import { useState } from 'react';
+import { useState } from 'react'
 
 export const SideBar = () => {
-    const [open, setOpen] = useState(true);
-    return(
-        <div className="flex">
-            <div className={`${open ? "w-72" : "w-10"} h-screen bg-dark-purple relative`}>
-                <img src={Control} className="absolute cursor-pointer rounded-full -right-3 top-9 w-7
-            border-2 border-dark-purple" alt="sidebaricon" onClick={()=>setOpen(!open)}/>
-            </div>   
-            <div className="p-7 text-2x1 font-semibold flex-1 h-screen">
-                <h1>SideBar Test</h1>
-            </div>
-        </div>
-    )
+  const [isOpen, setIsOpen] = useState(false);
+  const Categories = [ 
+    {name: "Electronics"},
+    {name: "Toys"},
+    {name: "Clothes"},
+    {name: "Snacks"},
+    {name: "Video Games"},
+    {name: "Household Supplies"},
+  ]
+
+  return (
+    <>
+      {!isOpen ? (
+        <button
+          className='fixed z-30 flex items-center cursor-pointer right-5 top-8'
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <svg fill='black' viewBox='0 0 100 80' width='20' height='20'>
+            <rect width='100' height='10'></rect>
+            <rect y='30' width='100' height='10'></rect>
+            <rect y='60' width='100' height='10'></rect>
+          </svg>
+        </button>
+      ) : (
+        <button
+          class='text-xl text-white fixed top-4 right-4 z-10'
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          x
+        </button>
+      )}
+      <div
+        className={`top-0 right-0 fixed bg-gray-800 w-[25vw] h-full p-10 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        } ease-in-out duration-300`}
+      >
+        <h2 className='text-2xl text-white'>SideBar</h2>
+        <ul>
+            {Categories.map((category, index) => (
+                <li key={index} className="text-gray-300 text-sm">{category.name}</li>
+            ))}
+        </ul>
+      </div>
+    </>
+  )
 }

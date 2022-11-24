@@ -9,3 +9,7 @@ export const TOGGLE_CART = "TOGGLE_CART";
 
 export const UPDATE_CATEGORIES = "UPDATE_CATEGORIES";
 export const UPDATE_CURRENT_CATEGORY = "UPDATE_CURRENT_CATEGORY";
+
+//admin
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const EDIT_PRODUCT = "EDIT_PRODUCT";

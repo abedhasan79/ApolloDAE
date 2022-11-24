@@ -36,3 +36,61 @@ code {
 #dark {
   background-color: rgb(71, 64, 64);
 }
+
+
+
+
+/**************/
+.dark-mode{
+  --primary: #9b9ba2;
+  --bg-color: #2b2a33;
+  --bg-form: #42414d;
+  --shadow:  rgb(9, 27, 36);
+}
+.light-mode{
+  --primary: #5454e9;
+  --bg-color: #fdfdfd;
+  --bg-form: #f6f7f9;
+  --shadow:  #d0d0d0;
+}
+:focus{
+  outline: none;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
+.app-container{
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+}
+.theme-switch{
+  position: absolute;
+  top: 33px;
+  left: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+.theme-switch span{
+
+  display: flex;
+  color: var(--primary);
+  font-weight: 600;
+}
+.theme-switch span:hover{
+  cursor: pointer;
+}
+.fa-icon{
+    color: var(--primary);
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+
+

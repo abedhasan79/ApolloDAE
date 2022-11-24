@@ -1,0 +1,16 @@
+.theCard{
+    width: 320px;
+    padding: 20px;
+    border: 1px solid #c9c9c9;
+    line-height: 40px;
+   
+}
+
+.prodName{
+    font-family: 'Nova Flat';
+    ;font-size: 22px;
+}
+
+.inStock{
+    color: grey;
+}

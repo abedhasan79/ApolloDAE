@@ -4,7 +4,7 @@ import {Banner} from '../components/Banner'
 
 const style={
     hw:{
-        marginTop: '20vh'
+        marginTop: '30vh'
     }
 }
 const Home = () => {

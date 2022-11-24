@@ -34,7 +34,7 @@ export const SideBar = () => {
         </button>
       )}
       <div
-        className={`top-0 right-0 fixed bg-gray-800 w-[25vw] h-full p-10 ${
+        className={`top-0 right-0 fixed bg-gray-800 w-[21vw] h-full p-10 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } ease-in-out duration-300`}
       >

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 const featuredProducts = [
-  // <img src={img1} alt="potato"/>
   '/img/img1.jpg',
   '/img/img3.jpg',
 ]
@@ -30,7 +29,7 @@ export const Banner = () => {
   return (
     <div className='max-w-7xl m-auto mb-20  select-none relative'>
       <div className='aspect-w-10 aspect-h-9'>
-        <img src={featuredProducts[currentIndex]} alt='bannerimg' />
+        <img style={{maxWidth: "79%", marginLeft:"10%"}} src={featuredProducts[currentIndex]} alt='bannerimg' />
       </div>
 
     </div>

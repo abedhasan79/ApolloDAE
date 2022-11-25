@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ProductList from '../components/ProductList'
-import CategoryMenu from '../components/CategoryMenu'
+// import CategoryMenu from '../components/CategoryMenu'
 import { Banner } from '../components/Banner'
 
 import { FaMoon, FaSun } from 'react-icons/fa'
@@ -34,7 +34,7 @@ const Home = () => {
       <div style={style.hw}>
         <Banner />
         <div>
-          <CategoryMenu />
+          {/* <CategoryMenu /> */}
           <ProductList />
         </div>
       </div>

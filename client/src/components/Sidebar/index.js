@@ -1,16 +1,55 @@
-import React from 'react'
+// import React from 'react'
 import { useState } from 'react'
+import React, { useEffect } from 'react';
+import { useQuery } from '@apollo/client';
+import { useStoreContext } from '../../utils/GlobalState';
+import {
+  UPDATE_CATEGORIES,
+  UPDATE_CURRENT_CATEGORY,
+} from '../../utils/actions';
+import { QUERY_CATEGORIES } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+
 
 const SideBar = () => {
+  const [state, dispatch] = useStoreContext();
+
+  const { categories } = state;
+
+  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+
+  useEffect(() => {
+    if (categoryData) {
+      dispatch({
+        type: UPDATE_CATEGORIES,
+        categories: categoryData.categories,
+      });
+      categoryData.categories.forEach((category) => {
+        idbPromise('categories', 'put', category);
+      });
+    } else if (!loading) {
+      idbPromise('categories', 'get').then((categories) => {
+        dispatch({
+          type: UPDATE_CATEGORIES,
+          categories: categories,
+        });
+      });
+    }
+  }, [categoryData, loading, dispatch]);
+
+  const handleClick = (id) => {
+    dispatch({
+      type: UPDATE_CURRENT_CATEGORY,
+      currentCategory: id,
+    });
+  };
+
+
+
+
+
   const [isOpen, setIsOpen] = useState(false);
-  const Categories = [ 
-    {name: "Electronics", link:"/"},
-    {name: "Toys", link:"/"},
-    {name: "Clothes", link:"/"},
-    {name: "Snacks", link:"/"},
-    {name: "Video Games", link:"/"},
-    {name: "Household Supplies", link:"/"},
-  ]
+
 
   return (
     <>
@@ -34,17 +73,28 @@ const SideBar = () => {
         </button>
       )}
       <div
-        className={`top-0 right-0 fixed bg-gray-800 w-[23vw] h-full p-10 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } ease-in-out duration-300`}
+        className={`top-0 right-0 fixed bg-gray-800 w-[23vw] h-full p-10 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          } ease-in-out duration-300`}
       >
         <h2 className='text-2xl text-white'>Categories</h2>
         <ul>
-            {Categories.map((category) => (
+          {/* {Categories.map((category) => (
                 <li key={category.name} className="text-gray-300 text-sm">
                     <a href={category.link} className='text-red-800 hover:text-blue-400 duration-500'>{category.name}</a>
                     </li>
-            ))}
+            ))} */}
+
+          {categories.map((item) => (
+            <li className=''
+              key={item._id}
+              onClick={() => {
+                handleClick(item._id);
+              }}
+            >
+              {item.name}
+            </li>
+          ))}
+
         </ul>
       </div>
     </>

@@ -36,6 +36,42 @@ db.once('open', async () => {
       price: 4.99,
       quantity: 100
     },
+     {
+      name: 'Pocky',
+      description:
+        'Japanese snack with different flavours',
+      image: 'pocky.jpg',
+      category: categories[0]._id,
+      price: 5.99,
+      quantity: 80
+    },
+     {
+      name: 'Hichew',
+      description:
+        'Sweet and chewy',
+      image: 'hichew.png',
+      category: categories[0]._id,
+      price: 2.99,
+      quantity: 130
+    },
+     {
+      name: 'Cheesecake',
+      description:
+        'Classic Cheesecake',
+      image: 'cheesecake.jpg',
+      category: categories[0]._id,
+      price: 4.99,
+      quantity: 10
+    },
+     {
+      name: 'Strawberry Boba Powder',
+      description:
+        'Strawberry flavoured bubble tea.',
+      image: 'boba.jpg',
+      category: categories[0]._id,
+      price: 4.99,
+      quantity: 100
+    },
     {
       name: 'Star Theme Bed sheet',
       category: categories[1]._id,
@@ -63,6 +99,33 @@ db.once('open', async () => {
       price: 14.99,
       quantity: 100
     },
+     {
+      name: 'Modern Lamp',
+      category: categories[1]._id,
+      description:
+        'Add a nice modern touch to your home with our modern lamp.',
+      image: 'lamp.jpg',
+      price: 20.99,
+      quantity: 4
+    },
+     {
+      name: 'Hero Academia Poster',
+      category: categories[1]._id,
+      description:
+        'Decorate your wall with this Hero Academia Poster!',
+      image: 'anime.jpg',
+      price: 17.99,
+      quantity: 1
+    },
+     {
+      name: 'Mirror',
+      category: categories[1]._id,
+      description:
+        'Mirror mirror on the wall....',
+      image: 'mirror.jpg',
+      price: 7.99,
+      quantity: 2
+    },
     {
       name: 'Iphone 11',
       category: categories[2]._id,
@@ -81,9 +144,27 @@ db.once('open', async () => {
       price: 199.99,
       quantity: 30
     },
+      {
+      name: 'Mario Kart ',
+      category: categories[3]._id,
+      description:
+        'Nintendo games.',
+      image: 'mariok.jpg',
+      price: 19.99,
+      quantity: 33
+    },
+      {
+      name: 'Zelda Breath of The Wild',
+      category: categories[3]._id,
+      description:
+        'Nintendo games.',
+      image: 'zelda.jpg',
+      price: 19.99,
+      quantity: 2
+    },
     {
       name: 'Fidget Spinner',
-      category: categories[3]._id,
+      category: categories[4]._id,
       description:
         'For all your distracted needs, a fidget spinner is nice and user friendly.',
       image: 'fidget.jpg',
@@ -122,6 +203,24 @@ db.once('open', async () => {
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
       image: 'baseballhat.jpg',
+      price: 9.99,
+      quantity: 600
+    },
+      {
+      name: 'Sweater',
+      category: categories[5]._id,
+      description:
+        'Just a warm comfy sweater.',
+      image: 'sweater.jpg',
+      price: 9.99,
+      quantity: 600
+    },
+      {
+      name: 'Socks',
+      category: categories[5]._id,
+      description:
+        'Winter socks, keeps you warm.',
+      image: 'socks.jpg',
       price: 9.99,
       quantity: 600
     }

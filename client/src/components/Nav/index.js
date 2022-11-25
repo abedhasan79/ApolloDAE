@@ -60,11 +60,12 @@
 import React from 'react'
 import { Login } from '../Login'
 import Cart from '../Cart'
-//
+import {Contact} from '../Contact'
+
 const Nav = () => {
   let Links = [
     { name: "Home", link: "/" },
-    { name: "Contact" },
+    { name: <Contact/> },
     { name: <Login /> },
     { name: <Cart /> },
   ]

@@ -12,7 +12,7 @@ import Admin from './pages/Admin';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
-import Login from './pages/Login';
+import {Login} from '../src/components/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import SideBar from './components/Sidebar';

@@ -11,6 +11,7 @@ import { QUERY_PRODUCTS } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
 import spinner from '../../../assets/spinner.gif';
 import { EDIT_PRODUCT } from '../../../utils/mutations';
+import { DELETE_PRODUCT } from '../../../utils/mutations';
 
 const style = {
   MT: {
@@ -29,6 +30,9 @@ function EditProduct() {
   const { products } = state;
 
   const [editProduct, { error }] = useMutation(EDIT_PRODUCT);
+  const [deleteProduct] = useMutation(DELETE_PRODUCT);
+
+  
 
   useEffect(() => {
     // already in global store
@@ -93,6 +97,25 @@ function EditProduct() {
     });
   };
 
+  const handleFormSubmitDeleteProduct = async  (event)=>{
+    event.preventDefault();
+    try{
+      const {data} =await deleteProduct({
+        variables: {
+          id: currentProduct._id
+        }
+        
+      });
+      
+      if(data){
+        window.location.reload();
+      }
+      
+    }catch(e){
+      console.log(e);
+    }
+  }
+
   return (
     <>
       <div style={style.MT}>
@@ -145,12 +168,12 @@ function EditProduct() {
                 <button type="submit">Update Product</button>
               </form>
 
-              <button type='button'>DELETE PRODUCT</button>
+              <button type='button' onClick={handleFormSubmitDeleteProduct}>DELETE PRODUCT</button>
             </div>
 
 
           </div>
-        ) : null}
+        ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}
         {loading ? <img src={spinner} alt="loading" /> : null}
       </div>
     </>

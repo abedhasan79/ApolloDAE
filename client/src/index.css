@@ -102,3 +102,39 @@ html,body{
 
 }
 
+/****contact***/
+
+.headers1{
+  font-weight: bolder;
+  color: red;
+  font-size: 35px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.headers2 {
+  font-weight: bold;
+  color:rgb(9, 27, 36)
+}
+
+.email1{
+  margin-top: 14px;
+  font-weight: bold;
+  color: blue;
+}
+
+.linkedIn{
+  margin-top: 15px;
+  color: green;
+  font-weight: bolder;
+}
+
+.names{
+  color:rgb(9, 27, 36);
+  font-weight: bold;
+}
+
+.linkuser{
+  color: rgb(24, 118, 21);
+  text-decoration: underline;
+}

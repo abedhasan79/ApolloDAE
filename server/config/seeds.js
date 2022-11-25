@@ -188,6 +188,15 @@ db.once('open', async () => {
       price: 2.99,
       quantity: 1000
     },
+      {
+      name: 'Yoyo',
+      category: categories[4]._id,
+      description:
+        'Just some good ole yoyo.',
+      image: 'yoyo.jpg',
+      price: 1.99,
+      quantity: 100
+    },
     {
       name: 'Cardigans',
       category: categories[5]._id,

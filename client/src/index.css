@@ -39,7 +39,7 @@ code {
 
 
 
-
+/*light/darkmode*/
 /**************/
 .dark-mode{
   --primary: #9b9ba2;
@@ -92,5 +92,13 @@ html,body{
     cursor: pointer;
   }
 
+/************Footer***********************/
 
+.footerbtn {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-top: solid rgb(170, 166, 166);
+  /* margin-top: 400px; */
+
+}
 

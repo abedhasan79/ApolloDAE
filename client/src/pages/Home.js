@@ -7,7 +7,7 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 
 const style = {
   hw: {
-    marginTop: '30vh'
+    marginTop: '15vh'
   }
 }
 

@@ -101,6 +101,9 @@ const resolvers = {
         { new: true },
       );
     },
+    deleteProduct: async (parent, {_id})=>{
+      return await Product.findByIdAndDelete( _id);
+    },
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);

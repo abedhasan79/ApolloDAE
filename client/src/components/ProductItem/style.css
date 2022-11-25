@@ -10,10 +10,11 @@
 .prodName{
     font-family: 'Nova Flat';
     font-size: 22px;
+    color: rgb(0, 178, 232);
 }
 
 .inStock{
-    color: grey;
+    color: rgb(6, 135, 6);
 }
 
 .a{

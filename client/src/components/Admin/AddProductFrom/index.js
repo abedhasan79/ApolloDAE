@@ -89,12 +89,12 @@ const AddProductFrom = () => {
                     /> */}
                     <select name="category" placeholder="select category" onChange={handleChange}>
                         <option value="">select category</option>
-                        <option value="637faf040d02a72ed002c1d5">Electronics</option>
-                        <option value="637faf040d02a72ed002c1d7">Toys</option>
-                        <option value="637faf040d02a72ed002c1d8">Clothes</option>
-                        <option value="637faf040d02a72ed002c1d3">Snacks</option>
-                        <option value="637faf040d02a72ed002c1d6">Video Games</option>
-                        <option value="637faf040d02a72ed002c1d4">Household Supply</option>
+                        <option value="63810e33d46cdc0d2e98abb2">Electronics</option>
+                        <option value="63810e33d46cdc0d2e98abb4">Toys</option>
+                        <option value="63810e33d46cdc0d2e98abb5">Clothes</option>
+                        <option value="63810e33d46cdc0d2e98abb0">Snacks</option>
+                        <option value="63810e33d46cdc0d2e98abb3">Video Games</option>
+                        <option value="63810e33d46cdc0d2e98abb1">Household Supply</option>
                     </select>
                     <button type="submit">submit</button>
                 </form>

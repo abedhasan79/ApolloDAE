@@ -9,7 +9,8 @@ db.once('open', async () => {
     { name: 'Household Supplies' },
     { name: 'Electronics' },
     { name: 'Video Games' },
-    { name: 'Toys' }
+    { name: 'Toys' },
+    { name: 'Clothes'}
   ]);
 
   console.log('categories seeded');
@@ -154,7 +155,7 @@ db.once('open', async () => {
     lastName: 'Admin',
     email: 'admin@apollodae.com',
     password: 'admindae',
-    isAdmin:'true'
+    isAdmin:true
   });
 
   console.log('users seeded');

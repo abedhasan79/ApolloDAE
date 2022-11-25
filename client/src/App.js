@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -20,7 +20,7 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import EditProduct from './components/Admin/EditProduct';
-import {Footer} from './components/Footer'
+import { Footer } from './components/Footer'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,54 +42,56 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [showNav, setShowNav] = useState(true);
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
           <StoreProvider>
             <Nav />
-            <SideBar/>
+            <SideBar />
             <Routes>
               <Route
                 path="/admin"
-                element={<Admin/>}
+                element={<Admin />}
               />
 
-              <Route 
-                path="/" 
-                element={<Home />} 
+              <Route
+                path="/"
+                element={<Home />}
               />
-              <Route 
-                path="/login" 
-                element={<Login />} 
+              <Route
+                path="/login"
+                element={<Login />}
               />
-              <Route 
-                path="/signup" 
-                element={<Signup />} 
+              <Route
+                path="/signup"
+                element={<Signup />}
               />
-              <Route 
-                path="/success" 
-                element={<Success />} 
+              <Route
+                path="/success"
+                element={<Success />}
               />
-              <Route 
-                path="/orderHistory" 
-                element={<OrderHistory />} 
+              <Route
+                path="/orderHistory"
+                element={<OrderHistory />}
               />
-              <Route 
-                path="/products/:id" 
-                element={<Detail />} 
+              <Route
+                path="/products/:id"
+                element={<Detail />}
               />
-              <Route 
-                path="/admin/products/:id" 
-                element={<EditProduct />} 
+              <Route
+                path="/admin/products/:id"
+                element={<EditProduct />}
               />
-              <Route 
-                path="*" 
-                element={<NoMatch />} 
+              <Route
+                path="*"
+                element={<NoMatch />}
               />
             </Routes>
+            <Footer />
           </StoreProvider>
-          <Footer />
+
         </div>
       </Router>
     </ApolloProvider>

@@ -64,16 +64,13 @@ mutation Mutation($name: String!, $description: String!, $price: Float!, $quanti
 }
 `;
 export const EDIT_PRODUCT = gql`
-mutation editProduct($name: String!
-    $description: String!
-    $price: Int!
-    $quantity: Int!
-  ) {
-    editProduct(
-      name: $name
-      description: $description
-      price: $price
-      quantity: $quantity
-    )
+mutation Mutation($id: ID!, $name: String!, $description: String!, $price: Float!, $quantity: Int!) {
+  editProduct(_id: $id, name: $name, description: $description, price: $price, quantity: $quantity) {
+    _id
+    name
+    description
+    price
+    quantity
   }
+}
 `;

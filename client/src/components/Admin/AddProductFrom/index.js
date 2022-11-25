@@ -57,7 +57,7 @@ const AddProductFrom = () => {
                         type="text"
                         onChange={handleChange}
                     />
-                    <input
+                    <textarea
                         placeholder="description"
                         name="description"
                         type="text"

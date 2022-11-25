@@ -58,14 +58,15 @@
 // export default Nav;
 
 import React from 'react'
-// import { Login } from './Login'
+import { Login } from '../Login'
+import Cart from '../Cart'
 //
 const Nav = () => {
   let Links = [
     { name: "Home", link: "/" },
     { name: "Contact" },
-    // { name: <Login /> },
-    { name: "Cart" },
+    { name: <Login /> },
+    { name: <Cart /> },
   ]
 
   return (

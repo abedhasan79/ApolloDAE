@@ -149,6 +149,14 @@ db.once('open', async () => {
     password: 'password12345'
   });
 
+  await User.create({
+    firstName: 'Admin',
+    lastName: 'Admin',
+    email: 'admin@apollodae.com',
+    password: 'admindae',
+    isAdmin:'true'
+  });
+
   console.log('users seeded');
 
   process.exit();

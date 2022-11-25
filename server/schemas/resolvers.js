@@ -90,11 +90,11 @@ const resolvers = {
     }
   },
   Mutation: {
-    addProduct: async (parent, args) => {
-
-      const product = await Product.create(args);
-      return product;
-
+    addProduct: async (parent, args, context) => {
+      if (context.user.isAdmin) {
+        const product = await Product.create(args);
+        return product;
+      }
 
     },
     editProduct: async (parent, { _id, name, description, price, quantity }) => {

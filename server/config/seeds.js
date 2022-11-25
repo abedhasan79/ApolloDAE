@@ -19,109 +19,217 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Box of Candy',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        'A mix of every chocolate bar. Snickers, Corny, Kinder, Bounty, Hanula, Duplo, Mars, Twix && more',
+      image: 'candy.jpg',
+      category: categories[0]._id,
+      price: 9.99,
+      quantity: 10
+    },
+    {
+      name: 'Chips',
+      description:
+        'Old Dutch Ridgies extra ketchup chip.',
+      image: 'chips.jpg',
+      category: categories[0]._id,
+      price: 4.99,
+      quantity: 100
+    },
+     {
+      name: 'Pocky',
+      description:
+        'Japanese snack with different flavours',
+      image: 'pocky.jpg',
+      category: categories[0]._id,
+      price: 5.99,
+      quantity: 80
+    },
+     {
+      name: 'Hichew',
+      description:
+        'Sweet and chewy',
+      image: 'hichew.png',
       category: categories[0]._id,
       price: 2.99,
-      quantity: 500
+      quantity: 130
     },
-    {
-      name: 'Canned Coffee',
+     {
+      name: 'Cheesecake',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        'Classic Cheesecake',
+      image: 'cheesecake.jpg',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 4.99,
+      quantity: 10
     },
-    {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+     {
+      name: 'Strawberry Boba Powder',
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
-    },
-    {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
-    },
-    {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
+        'Strawberry flavoured bubble tea.',
+      image: 'boba.jpg',
+      category: categories[0]._id,
+      price: 4.99,
       quantity: 100
     },
     {
-      name: 'Camera',
+      name: 'Star Theme Bed sheet',
+      category: categories[1]._id,
+      description:
+        'A very nice decorative bed sheet designed with stars to give that comforting feel at night',
+      image: 'starbedsheet.jpg',
+      price: 17.99,
+      quantity: 2
+    },
+    {
+      name: 'Scented Candles',
+      category: categories[1]._id,
+      description:
+        'Beautiful vanilla flavoured candles decorated with floral petals and cactuses.',
+      image: 'duocandles.jpg',
+      price: 10.99,
+      quantity: 20
+    },
+    {
+      name: 'Fluff Snow White Carpet',
+      category: categories[1]._id,
+      description:
+        'Fluffy and warm.',
+      image: 'carpet.jpeg',
+      price: 14.99,
+      quantity: 100
+    },
+     {
+      name: 'Modern Lamp',
+      category: categories[1]._id,
+      description:
+        'Add a nice modern touch to your home with our modern lamp.',
+      image: 'lamp.jpg',
+      price: 20.99,
+      quantity: 4
+    },
+     {
+      name: 'Hero Academia Poster',
+      category: categories[1]._id,
+      description:
+        'Decorate your wall with this Hero Academia Poster!',
+      image: 'anime.jpg',
+      price: 17.99,
+      quantity: 1
+    },
+     {
+      name: 'Mirror',
+      category: categories[1]._id,
+      description:
+        'Mirror mirror on the wall....',
+      image: 'mirror.jpg',
+      price: 7.99,
+      quantity: 2
+    },
+    {
+      name: 'Iphone 11',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
+        'Apple product Iphones with multiple of colors to choose from.',
+      image: 'iphones.jpg',
       price: 399.99,
       quantity: 30
     },
     {
-      name: 'Tablet',
+      name: 'BenQ Monitor',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
+        'Watch everything in 4k.',
+      image: 'monitor.jpg',
       price: 199.99,
       quantity: 30
     },
-    {
-      name: 'Tales at Bedtime',
+      {
+      name: 'Mario Kart ',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
+        'Nintendo games.',
+      image: 'mariok.jpg',
+      price: 19.99,
+      quantity: 33
+    },
+      {
+      name: 'Zelda Breath of The Wild',
+      category: categories[3]._id,
+      description:
+        'Nintendo games.',
+      image: 'zelda.jpg',
+      price: 19.99,
+      quantity: 2
+    },
+    {
+      name: 'Fidget Spinner',
+      category: categories[4]._id,
+      description:
+        'For all your distracted needs, a fidget spinner is nice and user friendly.',
+      image: 'fidget.jpg',
       price: 9.99,
       quantity: 100
     },
     {
-      name: 'Spinning Top',
+      name: 'Nintendo Switch',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
+      description: 'Nintendo Switch is designed to fit your life, transforming from home console to portable system in a snap.',
+      image: 'switch.jpg',
+      price: 599.99,
       quantity: 1000
     },
     {
-      name: 'Set of Plastic Horses',
+      name: 'Play Doh',
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
+        'Welcome to the official Play-Doh website! Find Play-Doh sets, videos, apps, arts & crafts toys for creative kids here.',
+      image: 'playdoh.jpg',
       price: 2.99,
       quantity: 1000
     },
-    {
-      name: 'Teddy Bear',
+      {
+      name: 'Yoyo',
       category: categories[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
+        'Just some good ole yoyo.',
+      image: 'yoyo.jpg',
+      price: 1.99,
       quantity: 100
     },
     {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
+      name: 'Cardigans',
+      category: categories[5]._id,
+      description:
+        'Wool material felt cardigans comes in different colors.',
+      image: 'clothes.jpg',
+      price: 17.99,
+      quantity: 100
+    },
+    {
+      name: 'Baseball Hat',
+      category: categories[5]._id,
       description:
         'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
+      image: 'baseballhat.jpg',
+      price: 9.99,
+      quantity: 600
+    },
+      {
+      name: 'Sweater',
+      category: categories[5]._id,
+      description:
+        'Just a warm comfy sweater.',
+      image: 'sweater.jpg',
+      price: 9.99,
+      quantity: 600
+    },
+      {
+      name: 'Socks',
+      category: categories[5]._id,
+      description:
+        'Winter socks, keeps you warm.',
+      image: 'socks.jpg',
       price: 9.99,
       quantity: 600
     }

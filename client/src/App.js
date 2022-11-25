@@ -19,6 +19,7 @@ import SideBar from './components/Sidebar';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import EditProduct from './components/Admin/EditProduct';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -76,6 +77,10 @@ function App() {
               <Route 
                 path="/products/:id" 
                 element={<Detail />} 
+              />
+              <Route 
+                path="/admin/products/:id" 
+                element={<EditProduct />} 
               />
               <Route 
                 path="*" 

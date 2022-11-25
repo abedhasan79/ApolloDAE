@@ -19,7 +19,7 @@ function ProductItem(item) {
 
   return (
     <div className="theCard">
-      <Link to={`/products/${_id}`}>
+      <Link to={`/admin/products/${_id}`}>
         <img
           alt={name}
           src={`/images/${image}`}

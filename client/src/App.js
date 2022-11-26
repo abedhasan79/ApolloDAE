@@ -42,7 +42,7 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [showNav, setShowNav] = useState(true);
+  
   return (
     <ApolloProvider client={client}>
       <Router>

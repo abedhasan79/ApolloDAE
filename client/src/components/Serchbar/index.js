@@ -6,39 +6,49 @@ import { idbPromise } from '../../utils/helpers';
 
 import '../ProductList/style.css';
 import { Link } from "react-router-dom";
+import './style.css';
 
 const Searchbar = () => {
     const { data: data1 } = useQuery(QUERY_USER);
     console.log(data1);
     const { data } = useQuery(QUERY_PRODUCTS);
     console.log(data);
+
+
+    const [state, setstate] = useState([]);
+
     const [query, setquery] = useState("");
 
-    const [state, setstate] = useState({
-        query: '',
-        list: []
-    })
-
     const handleChange = (e) => {
+        const searchWord = e.target.value;
+        setquery(searchWord);
         const results = data.products.filter(post => {
             if (e.target.value === "") return data.products
             return post.name.toLowerCase().includes(e.target.value.toLowerCase())
         })
-        setstate({
-            query: e.target.value,
-            list: results
-        })
+        // setstate({
+        //     query: e.target.value,
+        //     list: results
+        // })
+
+        if (searchWord === "") {
+            setstate([]);
+        } else {
+            setstate(results);
+        }
     }
     const clearField = () => {
-        setstate({
-            query: "",
-            list: []
-        })
+        // setstate({
+        //     query: "",
+        //     list: []
+        // });
+        setstate([]);
+        setquery("");
     }
     return (
         <>
             <div>
-                <form>
+                <div className="searchInputs">
                     <input
                         id='searBarClear'
                         type="search"
@@ -47,22 +57,22 @@ const Searchbar = () => {
                         defaultValue={query}
                         onChange={handleChange}
                     />
+                </div>
 
-                </form>
+                {state.length !== 0 && (
+                    <div className="dataResult">
+                        {(!data1 || !data1.user.isAdmin) ? (
+                            (state.query === '' ? "" : state.map(post => {
+                                return <li key={post.name} onClick={clearField} className="dataItem"><Link to={`/products/${post._id}`} >{post.name}</Link></li>
+                            }))
+                        ) : (data1 && data1.user.isAdmin) ? (
+                            (state.query === '' ? "" : state.map(post => {
+                                return <li key={post.name} onClick={clearField} className="dataItem"><Link to={`/admin/products/${post._id}`} >{post.name}</Link></li>
+                            }))
+                        ) : null}
 
+                    </div>)}
             </div>
-            <ul>
-                {(!data1 || !data1.user.isAdmin) ? (
-                    (state.query === '' ? "" : state.list.map(post => {
-                        return <li key={post.name} onClick={clearField}><Link to={`/products/${post._id}`} >{post.name}</Link></li>
-                    }))
-                ) : (data1 && data1.user.isAdmin) ? (
-                    (state.query === '' ? "" : state.list.map(post => {
-                        return <li key={post.name} onClick={clearField}><Link to={`/admin/products/${post._id}`} >{post.name}</Link></li>
-                    }))
-                ) : null}
-
-            </ul>
         </>
     )
 }

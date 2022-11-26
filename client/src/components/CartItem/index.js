@@ -47,19 +47,19 @@ const CartItem = ({ item }) => {
       <div>
         <div>{item.name}, ${item.price}</div>
         <div>
-          <span>Qty:</span>
+          <span>Quantity: </span>
           <input
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
             onChange={onChange}
           />
-          <span
+          <span className="rmvcartbtn"
             role="img"
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            Remove
           </span>
         </div>
       </div>

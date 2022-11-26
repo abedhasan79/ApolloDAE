@@ -1,11 +1,11 @@
 .cart {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 90px;
+  right: 5px;
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
-  background-color: var(--light);
+  background-color: white;
   overflow: auto;
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);

@@ -138,3 +138,11 @@ html,body{
   color: rgb(24, 118, 21);
   text-decoration: underline;
 }
+
+
+/*cart button*/
+
+.rmvcartbtn {
+  color: red;
+  cursor: pointer;
+}

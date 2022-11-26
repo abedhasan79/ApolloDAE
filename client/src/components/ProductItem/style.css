@@ -9,7 +9,6 @@
     --spacing-two: calc(1rem);
   }
 
-
 .theCard{
     width: 316px;
     padding: 25px;
@@ -39,8 +38,9 @@ background-color: rgb(46, 168, 5); /* Green */
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  /* display: block; */
   font-size: 16px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
   transition-duration: 0.4s;
   cursor: pointer;
   font-family: 'Nova Flat';
@@ -80,8 +80,13 @@ color: rgb(0, 0, 0);
       }
 
       .productPic1{
-        max-height: 200px;
+        height: 200px;
         display: block;
         margin-left: auto;
         margin-right: auto;
       }
+
+      /* .positionBtn{
+        background-color: #B12704;
+        position: relative;
+      } */

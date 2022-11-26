@@ -1,62 +1,3 @@
-// import React from "react";
-// import Auth from "../../utils/auth";
-// import { Link } from "react-router-dom";
-
-// function Nav() {
-
-//   function showNavigation() {
-//     if (Auth.loggedIn()) {
-//       return (
-//         <ul className="flex-row">
-//           <li className="mx-1">
-//             <Link to="/orderHistory">
-//               Order History
-//             </Link>
-//           </li>
-//           <li className="mx-1">
-//             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-//             <a href="/" onClick={() => Auth.logout()}>
-//               Logout
-//             </a>
-//           </li>
-//         </ul>
-//       );
-//     } else {
-//       return (
-//         <ul className="flex-row">
-//           <li className="mx-1">
-//             <Link to="/signup">
-//               Signup
-//             </Link>
-//           </li>
-//           <li className="mx-1">
-//             <Link to="/login">
-//               Login
-//             </Link>
-//           </li>
-//         </ul>
-//       );
-//     }
-//   }
-
-//   return (
-//     <header className="flex-row px-1">
-//       <h1>
-//         <Link to="/">
-//           <span role="img" aria-label="shopping bag">🛍️</span>
-//           -Shop-Shop
-//         </Link>
-//       </h1>
-
-//       <nav>
-//         {showNavigation()}
-//       </nav>
-//     </header>
-//   );
-// }
-
-// export default Nav;
-
 import React from 'react'
 import { Login } from '../Login'
 import Cart from '../Cart'
@@ -126,14 +67,10 @@ const Nav = () => {
                 d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
               />
             </svg>
-            {/* <input
-              type='text'
-              placeholder='Search'
-              className='w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600'
-            /> */}
-            <Searchbar />
+            <Searchbar/>
           </div>
         </form>
+       
       </div>
     </div>
   )

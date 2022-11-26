@@ -1,11 +1,12 @@
 .detailContainer{
     margin-top: 200px;
+    height: 45vh;
 
 }
 
 .singleProductImg{
     /* border: 2px solid red; */
-    height: 400px;
+    height: 700px;
     width: fit-content;
     float:left; 
     
@@ -64,6 +65,18 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+    .row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%
+    }
+    .column {
+        display: flex;
+       flex-direction: column;
+       flex-basis: 100%;
+        flex: 1;
+      }
 }
 
 .row{
@@ -74,5 +87,4 @@
 .column {
     flex: 50%;
     padding: 16px;
-    height: 250px;
   }

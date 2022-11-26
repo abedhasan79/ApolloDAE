@@ -3,12 +3,15 @@ import { Login } from '../Login'
 import Cart from '../Cart'
 import { Contact } from '../Contact'
 import Searchbar from '../Serchbar'
+import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   let Links = [
     { name: 'Home', link: '/' },
     { name: <Contact /> },
-    { name: <Login /> },
+    { name: !Auth.loggedIn()? <Login />: <a onClick={() => Auth.logout()} href="/" >Logout</a> },
+    {name: Auth.loggedIn()? <Link to="/orderHistory">Orders</Link>:null},
     { name: <Cart /> }
   ]
 

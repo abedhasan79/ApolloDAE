@@ -124,9 +124,9 @@ export function Signup (props) {
                     placeholder='Password'
                   />
                 </div>
-                <a href='#' className='text-xs text-blue-600 hover:underline'>
+                {/* <a href='#' className='text-xs text-blue-600 hover:underline'>
                   Forget Password?
-                </a>
+                </a> */}
                 <div className='mt-6'>
                   <button
                     type='submit'

@@ -7,7 +7,7 @@ import { useStoreContext } from '../../../utils/GlobalState';
 import {
   UPDATE_PRODUCTS,
 } from '../../../utils/actions';
-import { QUERY_PRODUCTS } from '../../../utils/queries';
+import { QUERY_PRODUCTS, QUERY_USER } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
 import spinner from '../../../assets/spinner.gif';
 import { EDIT_PRODUCT } from '../../../utils/mutations';
@@ -32,7 +32,7 @@ function EditProduct() {
   const [editProduct, { error }] = useMutation(EDIT_PRODUCT);
   const [deleteProduct] = useMutation(DELETE_PRODUCT);
 
-  
+  const { data: data2 } = useQuery(QUERY_USER);
 
   useEffect(() => {
     // already in global store
@@ -97,87 +97,98 @@ function EditProduct() {
     });
   };
 
-  const handleFormSubmitDeleteProduct = async  (event)=>{
+  const handleFormSubmitDeleteProduct = async (event) => {
     event.preventDefault();
-    try{
-      const {data} =await deleteProduct({
+    try {
+      const { data } = await deleteProduct({
         variables: {
           id: currentProduct._id
         }
-        
+
       });
-      
-      if(data){
+
+      if (data) {
         window.location.reload();
       }
-      
-    }catch(e){
+
+    } catch (e) {
       console.log(e);
     }
   }
 
-  return (
-    <>
-      <div style={style.MT}>
-        {currentProduct ? (
-          <div className="container my-1">
-            <Link to="/admin">← Back to Products</Link>
-            <div>
-              <img
-                src={`/images/${currentProduct.image}`}
-                alt={currentProduct.name}
-              />
-              <form onSubmit={handleFormSubmitEditProduct}>
-                <input
-                  placeholder="id"
-                  name="_id"
-                  type="text"
-                  defaultValue={currentProduct._id}
-                  onChange={handleChange}
-                  hidden
+  if (!data2 || !data2.user.isAdmin) {
+    return (
+      <>
+        <div style={style.MT}>
+          <a href='/'>MUST BE A ADMIN TO USE THIS PAGE. CLICK HERE TO GO BACK TO HOME PAGE</a>
+        </div>
+      </>
+    );
+  } else if (data2 && data2.user.isAdmin) {
+    return (
+      <>
+        <div style={style.MT}>
+          {currentProduct ? (
+            <div className="container my-1">
+              <Link to="/admin">← Back to Products</Link>
+              <div>
+                <img
+                  src={`/images/${currentProduct.image}`}
+                  alt={currentProduct.name}
                 />
-                <input
-                  placeholder="name"
-                  name="name"
-                  type="text"
-                  defaultValue={currentProduct.name}
-                  onChange={handleChange}
-                />
-                <textarea
-                  placeholder="description"
-                  name="description"
-                  type="text"
-                  defaultValue={currentProduct.description}
-                  onChange={handleChange}
-                />
+                <form onSubmit={handleFormSubmitEditProduct}>
+                  <input
+                    placeholder="id"
+                    name="_id"
+                    type="text"
+                    defaultValue={currentProduct._id}
+                    onChange={handleChange}
+                    hidden
+                  />
+                  <input
+                    placeholder="name"
+                    name="name"
+                    type="text"
+                    defaultValue={currentProduct.name}
+                    onChange={handleChange}
+                  />
+                  <textarea
+                    placeholder="description"
+                    name="description"
+                    type="text"
+                    defaultValue={currentProduct.description}
+                    onChange={handleChange}
+                  />
 
-                <input
-                  placeholder="price"
-                  name="price"
-                  type="number"
-                  defaultValue={currentProduct.price}
-                  onChange={handleChange}
-                />
-                <input
-                  placeholder="quantity"
-                  name="quantity"
-                  type="number"
-                  defaultValue={currentProduct.quantity}
-                  onChange={handleChange}
-                />
-                <button type="submit">Update Product</button>
-              </form>
+                  <input
+                    placeholder="price"
+                    name="price"
+                    type="number"
+                    defaultValue={currentProduct.price}
+                    onChange={handleChange}
+                  />
+                  <input
+                    placeholder="quantity"
+                    name="quantity"
+                    type="number"
+                    defaultValue={currentProduct.quantity}
+                    onChange={handleChange}
+                  />
+                  <button type="submit">Update Product</button>
+                </form>
 
-              <button type='button' onClick={handleFormSubmitDeleteProduct}>DELETE PRODUCT</button>
+                <button type='button' onClick={handleFormSubmitDeleteProduct}>DELETE PRODUCT</button>
+              </div>
+
+
             </div>
+          ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}
+          {loading ? <img src={spinner} alt="loading" /> : null}
+        </div>
+      </>
+    );
+  }
 
-
-          </div>
-        ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}
-        {loading ? <img src={spinner} alt="loading" /> : null}
-      </div>
-    </>
-  );
 }
 
 export default EditProduct;

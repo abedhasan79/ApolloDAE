@@ -1,8 +1,6 @@
 .detailContainer{
     margin-top: 200px;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
+
 }
 
 .singleProductImg{
@@ -13,18 +11,7 @@
     
 }
 
-.nameDesc{
-    /* border: 2px solid red; */
-    width: fit-content;
-   display: flex;
-    flex-direction: column;
-    margin-left: 50%;
-    margin-top: 10%;
-    line-height: 50px;
-    position: absolute;
-    float:left; 
-   
-}
+
 
 .priceDesc{
     /* border: 2px solid red; */
@@ -59,3 +46,33 @@
     border-radius: 10px;
     width: 150px;
 }
+
+
+@media screen and (max-width:818px) {
+    .detailContainer{
+        margin-top: 300px;
+        /* display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; */
+    }
+}
+
+@media screen and (max-width:818px) {
+    .nameDesc{
+        /* margin-top: 300px; */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+.row{
+    display: flex;
+    max-width: 800px;
+}
+
+.column {
+    flex: 50%;
+    padding: 16px;
+    height: 250px;
+  }

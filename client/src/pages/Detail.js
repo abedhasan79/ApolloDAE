@@ -84,39 +84,45 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="detailContainer">
+        <div className='detailContainer'>
           <Link className="linkBack" to="/">← Back to Products</Link>
-        <div className='nameDesc'>
-          <h2>{currentProduct.name}</h2>
+          <div className="row">
 
-          <p>{currentProduct.description}</p>
-          
-          <div className='priceDesc'>
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            
-            <div className='addtoCart'>
-            <button className='addThis' onClick={addToCart}>Add</button>
-            <button className='deleteThis'
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove
-            </button>
+            <div className='column'>
+              <h2>{currentProduct.name}</h2>
+
+              <p>{currentProduct.description}</p>
+
+              <div className='priceDesc'>
+                <p>
+                  <strong>Price:</strong>${currentProduct.price}{' '}
+
+                  <div className='addtoCart'>
+                    <button className='addThis' onClick={addToCart}>Add</button>
+                    <button className='deleteThis'
+                      disabled={!cart.find((p) => p._id === currentProduct._id)}
+                      onClick={removeFromCart}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </p>
+              </div>
             </div>
-          </p>
+            <div>
+              <img className='column'
+                src={`/images/${currentProduct.image}`}
+                alt={currentProduct.name}
+              />
+            </div>
           </div>
-          </div>
-          
-          <img className='singleProductImg'
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
-      <Cart />
+      {/* <Cart /> */}
+
     </>
+
   );
 }
 

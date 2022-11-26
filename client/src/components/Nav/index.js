@@ -5,15 +5,28 @@ import { Contact } from '../Contact'
 import Searchbar from '../Serchbar'
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import { QUERY_USER } from '../../utils/queries'
+import { useQuery } from '@apollo/client'
 
 const Nav = () => {
-  let Links = [
-    { name: 'Home', link: '/' },
-    { name: <Contact /> },
-    { name: !Auth.loggedIn()? <Login />: <a onClick={() => Auth.logout()} href="/" >Logout</a> },
-    {name: Auth.loggedIn()? <Link to="/orderHistory">Orders</Link>:null},
-    { name: <Cart /> }
-  ]
+  const { data: data2 } = useQuery(QUERY_USER);
+  console.log(data2);
+  let Links;
+  if (!data2 || !data2.user.isAdmin) {
+    Links = [
+      { name: 'Home', link: '/' },
+      { name: <Contact /> },
+      { name: !Auth.loggedIn() ? <Login /> : <a onClick={() => Auth.logout()} href="/" >Logout</a> },
+      { name: Auth.loggedIn() ? <Link to="/orderHistory">Orders</Link> : null },
+      { name: <Cart /> }
+    ]
+  }else if(data2 && data2.user.isAdmin){
+    Links = [
+      { name: 'Home', link: '/admin' },
+      { name: !Auth.loggedIn() ? <Login /> : <a onClick={() => Auth.logout()} href="/" >Logout</a> }
+    ]
+  }
+
 
   return (
     <div className='shadow-md w-full fixed top-0 left-0'>

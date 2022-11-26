@@ -3,13 +3,14 @@ import ProductItem from '../ProductItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
-import { QUERY_PRODUCTS } from '../../utils/queries';
+import { QUERY_PRODUCTS, QUERY_USER } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import '../ProductList/style.css';
 import { Link } from "react-router-dom";
 
 const Searchbar = () => {
-
+    const { data: data1 } = useQuery(QUERY_USER);
+    console.log(data1);
     const { data } = useQuery(QUERY_PRODUCTS);
     console.log(data);
     const [query, setquery] = useState("");
@@ -52,9 +53,16 @@ const Searchbar = () => {
 
             </div>
             <ul>
-                {(state.query === '' ? "" : state.list.map(post => {
-                    return <li key={post.name} onClick={clearField}><Link to={`/products/${post._id}`} >{post.name}</Link></li>
-                }))}
+                {(!data1 || !data1.user.isAdmin) ? (
+                    (state.query === '' ? "" : state.list.map(post => {
+                        return <li key={post.name} onClick={clearField}><Link to={`/products/${post._id}`} >{post.name}</Link></li>
+                    }))
+                ) : (data1 && data1.user.isAdmin) ? (
+                    (state.query === '' ? "" : state.list.map(post => {
+                        return <li key={post.name} onClick={clearField}><Link to={`/admin/products/${post._id}`} >{post.name}</Link></li>
+                    }))
+                ) : null}
+
             </ul>
         </>
     )

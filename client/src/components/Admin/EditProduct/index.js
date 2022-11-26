@@ -10,7 +10,7 @@ import {
 import { QUERY_PRODUCTS, QUERY_USER } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
 import spinner from '../../../assets/spinner.gif';
-import { EDIT_PRODUCT } from '../../../utils/mutations';
+import {  EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
 import { DELETE_PRODUCT } from '../../../utils/mutations';
 
 const style = {
@@ -29,8 +29,12 @@ function EditProduct() {
 
   const { products } = state;
 
-  const [editProduct, { error }] = useMutation(EDIT_PRODUCT);
+  
   const [deleteProduct] = useMutation(DELETE_PRODUCT);
+  const [editProductName] = useMutation(EDIT_PRODUCT_NAME);
+  const [editProductDescription] = useMutation(EDIT_PRODUCT_DESCRIPTION);
+  const [editProductPrice] = useMutation(EDIT_PRODUCT_PRICE);
+  const [editProductQuantity] = useMutation(EDIT_PRODUCT_QUANTITY);
 
   const { data: data2 } = useQuery(QUERY_USER);
 
@@ -61,38 +65,130 @@ function EditProduct() {
     }
   }, [products, data, loading, dispatch, id]);
 
-  const [formState, setFormState] = useState(
+
+  const [formStateName, setFormStateName] = useState(
     {
       _id: '',
-      name: '',
-      description: '',
-      price: '',
+      name: ''
+    });
+
+  const [formStateDescription, setFormStateDescription] = useState(
+    {
+      _id: '',
+      description: ''
+    });
+
+  const [formStatePrice, setFormStatePrice] = useState(
+    {
+      _id: '',
+      price: ''
+    });
+
+  const [formStateQuantity, setFormStateQuantity] = useState(
+    {
+      _id: '',
       quantity: ''
     });
 
-  const handleFormSubmitEditProduct = async (event) => {
+  
+
+  const handleFormSubmitEditProductName = async (event) => {
     event.preventDefault();
 
     try {
 
-      const EditPro = await editProduct({
+      const EditName = await editProductName({
         variables: {
           id: currentProduct._id,
-          name: formState.name,
-          description: formState.description,
-          price: JSON.parse(formState.price),
-          quantity: JSON.parse(formState.quantity)
+          name: formStateName.name
         }
       });
-      return EditPro;
+      return EditName;
     } catch (e) {
       console.log(e);
     }
   };
-  const handleChange = (event) => {
+
+  const handleFormSubmitEditProductDescription = async (event) => {
+    event.preventDefault();
+
+    try {
+
+      const EditDescription = await editProductDescription({
+        variables: {
+          id: currentProduct._id,
+          description: formStateDescription.description
+        }
+      });
+      return EditDescription;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleFormSubmitEditProductPrice = async (event) => {
+    event.preventDefault();
+
+    try {
+
+      const EditPrice = await editProductPrice({
+        variables: {
+          id: currentProduct._id,
+          price: JSON.parse(formStatePrice.price)
+        }
+      });
+      return EditPrice;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleFormSubmitEditProductQuantity = async (event) => {
+    event.preventDefault();
+
+    try {
+
+      const EditQuantity = await editProductQuantity({
+        variables: {
+          id: currentProduct._id,
+          quantity: JSON.parse(formStateQuantity.quantity)
+        }
+      });
+      return EditQuantity;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  
+
+  const handleChangeName = (event) => {
     const { name, value } = event.target;
-    setFormState({
-      ...formState,
+    setFormStateName({
+      ...formStateName,
+      [name]: value,
+    });
+  };
+
+  const handleChangeDescripion = (event) => {
+    const { name, value } = event.target;
+    setFormStateDescription({
+      ...formStateDescription,
+      [name]: value,
+    });
+  };
+
+  const handleChangePrice = (event) => {
+    const { name, value } = event.target;
+    setFormStatePrice({
+      ...formStatePrice,
+      [name]: value,
+    });
+  };
+
+  const handleChangeQuantity = (event) => {
+    const { name, value } = event.target;
+    setFormStateQuantity({
+      ...formStateQuantity,
       [name]: value,
     });
   };
@@ -136,28 +232,39 @@ function EditProduct() {
                   src={`/images/${currentProduct.image}`}
                   alt={currentProduct.name}
                 />
-                <form onSubmit={handleFormSubmitEditProduct}>
+
+                <form onSubmit={handleFormSubmitEditProductName}>
+
                   <input
                     placeholder="id"
                     name="_id"
                     type="text"
                     defaultValue={currentProduct._id}
-                    onChange={handleChange}
+                    onChange={handleChangeName}
                     hidden
                   />
+
                   <input
                     placeholder="name"
                     name="name"
                     type="text"
                     defaultValue={currentProduct.name}
-                    onChange={handleChange}
+                    onChange={handleChangeName}
                   />
-                  <textarea
-                    placeholder="description"
-                    name="description"
+                  <button type="submit">Update Product Name</button>
+                </form>
+
+                
+
+                <form onSubmit={handleFormSubmitEditProductPrice}>
+
+                  <input
+                    placeholder="id"
+                    name="_id"
                     type="text"
-                    defaultValue={currentProduct.description}
-                    onChange={handleChange}
+                    defaultValue={currentProduct._id}
+                    onChange={handleChangePrice}
+                    hidden
                   />
 
                   <input
@@ -165,19 +272,55 @@ function EditProduct() {
                     name="price"
                     type="number"
                     defaultValue={currentProduct.price}
-                    onChange={handleChange}
+                    onChange={handleChangePrice}
                   />
+                  <button type="submit">Update Product Price</button>
+                </form>
+
+                <form onSubmit={handleFormSubmitEditProductQuantity}>
+
+                  <input
+                    placeholder="id"
+                    name="_id"
+                    type="text"
+                    defaultValue={currentProduct._id}
+                    onChange={handleChangeQuantity}
+                    hidden
+                  />
+
                   <input
                     placeholder="quantity"
                     name="quantity"
                     type="number"
                     defaultValue={currentProduct.quantity}
-                    onChange={handleChange}
+                    onChange={handleChangeQuantity}
                   />
-                  <button type="submit">Update Product</button>
+                  <button type="submit">Update Product Quantity</button>
+                </form>
+
+                <form onSubmit={handleFormSubmitEditProductDescription}>
+
+                  <input
+                    placeholder="id"
+                    name="_id"
+                    type="text"
+                    defaultValue={currentProduct._id}
+                    onChange={handleChangeDescripion}
+                    hidden
+                  />
+
+                  <textarea
+                    placeholder="description"
+                    name="description"
+                    type="text"
+                    defaultValue={currentProduct.description}
+                    onChange={handleChangeDescripion}
+                  />
+                  <button type="submit">Update Product Description</button>
                 </form>
 
                 <button type='button' onClick={handleFormSubmitDeleteProduct}>DELETE PRODUCT</button>
+
               </div>
 
 

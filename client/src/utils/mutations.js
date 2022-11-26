@@ -75,6 +75,38 @@ mutation Mutation($id: ID!, $name: String!, $description: String!, $price: Float
 }
 `;
 
+export const EDIT_PRODUCT_NAME = gql`
+mutation Mutation($id: ID!, $name: String!) {
+  editProductName(_id: $id, name: $name) {
+    name
+  }
+}
+`;
+
+export const EDIT_PRODUCT_DESCRIPTION = gql`
+mutation Mutation($id: ID!, $description: String!) {
+  editProductDescription(_id: $id, description: $description) {
+    description
+  }
+}
+`;
+
+export const EDIT_PRODUCT_PRICE = gql`
+mutation EditProductPrice($id: ID!, $price: Float!) {
+  editProductPrice(_id: $id, price: $price) {
+    price
+  }
+}
+`;
+
+export const EDIT_PRODUCT_QUANTITY = gql`
+mutation EditProductQuantity($id: ID!, $quantity: Int!) {
+  editProductQuantity(_id: $id, quantity: $quantity) {
+    quantity
+  }
+}
+`;
+
 export const DELETE_PRODUCT = gql`
 mutation Mutation($id: ID!) {
   deleteProduct(_id: $id) {

@@ -104,6 +104,34 @@ const resolvers = {
         { new: true },
       );
     },
+    editProductName: async (parent, { _id, name }) => {
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $set: { name: name } },
+        { new: true },
+      );
+    },
+    editProductDescription: async (parent, { _id, description }) => {
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $set: { description: description } },
+        { new: true },
+      );
+    },
+    editProductPrice: async (parent, { _id, price }) => {
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $set: { price: price } },
+        { new: true },
+      );
+    },
+    editProductQuantity: async (parent, { _id, quantity }) => {
+      return await Product.findByIdAndUpdate(
+        _id,
+        { $set: { quantity: quantity } },
+        { new: true },
+      );
+    },
     deleteProduct: async (parent, { _id }) => {
       return await Product.findByIdAndDelete(_id);
     },

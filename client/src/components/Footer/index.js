@@ -6,13 +6,14 @@ import { Terms } from "../Terms"
 export const Footer = () => {
   return (
     <div>
+     
+      <footer className="iconfooter"> 
       <a href='#'>
         <button className='footerbtn'>Back To Top</button>
       </a>
-      <footer class='p-4 bg-white sm:p-6 dark:bg-gray-900'>
         <div class='md:flex md:justify-between'>
           <div class='mb-6 md:mb-0'>
-            <a href='https://flowbite.com/' class='flex items-center'>
+            <a href='#' class='flex items-center'>
               <img
                 src='https://www.clipartmax.com/png/middle/451-4517294_learning-about-the-moon-and-the-sun-day-and-night-icon.png'
                 class='mr-3 h-8'

@@ -19,11 +19,13 @@ module.exports = {
 
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      console.log(data);
       req.user = data;
     } catch {
       console.log('Invalid token');
     }
-
+    console.log('i am an auth middleware');
+    console.log(req.user);
     return req;
   },
   signToken: function ({ firstName, email, _id, isAdmin }) {

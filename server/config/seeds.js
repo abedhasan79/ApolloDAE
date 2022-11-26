@@ -263,7 +263,7 @@ db.once('open', async () => {
     lastName: 'Admin',
     email: 'admin@apollodae.com',
     password: 'admindae',
-    isAdmin:'true'
+    isAdmin:true
   });
 
   console.log('users seeded');

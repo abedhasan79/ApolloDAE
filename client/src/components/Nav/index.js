@@ -61,6 +61,7 @@ import React from 'react'
 import { Login } from '../Login'
 import Cart from '../Cart'
 import { Contact } from '../Contact'
+import Searchbar from '../Serchbar'
 
 const Nav = () => {
   let Links = [
@@ -109,11 +110,12 @@ const Nav = () => {
                 d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
               />
             </svg>
-            <input
+            {/* <input
               type='text'
               placeholder='Search'
               className='w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600'
-            />
+            /> */}
+            <Searchbar/>
           </div>
         </form>
       </div>

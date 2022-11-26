@@ -1,3 +1,15 @@
+:root {
+    --primary: #232F3E;
+    --secondary: #F3A847;
+    --tertiary: #B12704;
+    --light: #fafafa;
+    --dark: #272f32;
+    --error: rgb(228, 46, 1);
+    --spacing-one: calc(1rem * 0.5);
+    --spacing-two: calc(1rem);
+  }
+
+
 .theCard{
     width: 316px;
     padding: 25px;
@@ -39,3 +51,37 @@ background-color: #ffffff;
 color: rgb(0, 0, 0);
     }
 
+
+    .px-1 {
+        padding-right: var(--spacing-one);
+        padding-left: var(--spacing-one);
+      }
+
+
+    .py-1 {
+        padding-top: var(--spacing-one);
+        padding-bottom: var(--spacing-one);
+      }
+
+
+      .card {
+        width: 25%;
+        text-align: center;
+        padding: 25px;
+        border: 1px solid #c9c9c9;
+        line-height: 40px;
+    margin-bottom: 75px;
+      }
+
+    @media screen and (max-width: 768px) {
+        .card {
+          width: 100%;
+        }
+      }
+
+      .productPic1{
+        max-height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }

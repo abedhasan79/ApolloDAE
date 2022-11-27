@@ -1,16 +1,13 @@
 .boxes{
-   margin: 20px;
    background-color: rgb(255, 255, 255);
-   overflow: hidden;
-   height: 300px;
-   max-height: 35vh;
-   box-shadow: 0px 12px 18px -6px black; 
-   width: 55%;
-   z-index:1;
-   margin-top: 50px;
+   color: rgb(0, 47, 175);
+
    
 }
-
-.boxes2{
-  z-index:1;
+.fade-in-image { 
+    display: flex;
+    animation: fadeIn 3s; }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

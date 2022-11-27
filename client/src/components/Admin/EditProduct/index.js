@@ -12,7 +12,7 @@ import { idbPromise } from '../../../utils/helpers';
 import spinner from '../../../assets/spinner.gif';
 import { EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_IMAGE, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
 import { DELETE_PRODUCT } from '../../../utils/mutations';
-import axios from 'axios';
+
 
 const style = {
   MT: {

@@ -27,7 +27,7 @@ export function Terms () {
             >
               Terms & Conditions
             </h1>
-            <p>
+            <p style={{color: "black"}}>
               Welcome to ApolloDAE! These terms and conditions outline the rules
               and regulations for the use of ApolloDAE's Website, located at
               apollodae-heroku.com. By accessing this website we assume you
@@ -54,7 +54,7 @@ export function Terms () {
             >
               Cookies
             </h1>
-            <p>
+            <p style={{color: "black"}}>
               We employ the use of cookies. By accessing ApolloDAE, you agreed
               to use cookies in agreement with the ApolloDAE's Privacy Policy.
               Most interactive websites use cookies to let us retrieve the

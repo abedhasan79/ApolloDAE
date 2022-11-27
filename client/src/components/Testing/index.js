@@ -10,12 +10,12 @@ export const Testing = () => {
   }, [])
   return (
     <div>
-      <h1>Featured Products for Men</h1>
-      <div className='fade-in-image'>
+      <h1 className="glow">Featured Mens Fashion</h1>
+      <div className='fade-in-image drop-shadow-xl'>
         <img src={MenFashion} />
         <h1
           class='bg-white text-blue-900'
-          style={{ width: '100%', textAlign: 'center',}}
+          style={{ width: '100%', textAlign: 'center', wordBreak: "break-word", overflowY: "auto", padding: "20px"}}
         >
           {' '}
           All products featured on Vogue are independently selected by our

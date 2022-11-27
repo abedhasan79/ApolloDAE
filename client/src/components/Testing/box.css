@@ -1,13 +1,35 @@
 .boxes{
    background-color: rgb(255, 255, 255);
    color: rgb(0, 47, 175);
-
    
 }
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px rgb(241, 10, 10), 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px rgb(248, 0, 0), 0 0 30px #ef0008, 0 0 40px #ee0479, 0 0 50px #fd0015, 0 0 60px #fa0810, 0 0 70px #ff0000, 0 0 80px #ff0000;
+  }
+}
+
+
 .fade-in-image { 
+    max-height: 500px;
     display: flex;
-    animation: fadeIn 3s; }
+    animation: fadeIn 5s; }
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+

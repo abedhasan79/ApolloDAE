@@ -9,7 +9,7 @@ import { QUERY_PRODUCTS, QUERY_USER } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
 import { EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_IMAGE, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
 import { DELETE_PRODUCT } from '../../../utils/mutations';
-
+import './style.css'
 
 const style = {
   MT: {
@@ -329,124 +329,165 @@ function EditProduct() {
   } else if (data2 && data2.user.isAdmin) {
     return (
       <>
-        <div style={style.MT}>
+        <div className='editProductFrom'>
           {currentProduct ? (
-            <div className="container my-1">
-              <Link to="/admin">← Back to Products</Link>
-              <div>
-                
+            <div className="container grid gap-6 mb-6 md:grid-cols-1">
+              <div className='welcome'>
+                <Link to="/admin" className='adminarrow'><i className="fa-regular fa-square-caret-left"></i></Link>
+                <h1>Welcome Admin. Update Product Info Using the Form Below</h1>
+              </div>
 
+              <div className='formforedit'>
                 <form onSubmit={handleformSubmitEditProductImage}>
 
-                  <input
-                    placeholder="id"
-                    name="_id"
-                    type="text"
-                    defaultValue={currentProduct._id}
-                    hidden
-                    onChange={handleChangeImage}
-                  />
+                  <div className="grid gap-6 mb-6 md:grid-cols-3">
+                    <div >
+                      <input
+                        placeholder="id"
+                        name="_id"
+                        type="text"
+                        defaultValue={currentProduct._id}
+                        hidden
+                        onChange={handleChangeImage}
+                      />
 
-                  <input
-                    placeholder="name"
-                    name="image"
-                    type="file"
-                    onChange={(e) => setImagee(e.target.files[0])}
+                      <input
+                        placeholder="name"
+                        name="image"
+                        type="file"
+                        onChange={(e) => setImagee(e.target.files[0])}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      />
 
-                  />
-                  <button type="submit" >Update Product Image</button>
+                      <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-breen-700 dark:focus:ring-green-800">Update Product Image</button>
+
+                    </div>
+
+                  </div>
+
                 </form>
 
                 <form onSubmit={handleFormSubmitEditProductName}>
+                  <div className="grid gap-6 mb-6 md:grid-cols-3">
+                    <div>
+                      <input
+                        placeholder="id"
+                        name="_id"
+                        type="text"
+                        defaultValue={currentProduct._id}
+                        onChange={handleChangeName}
+                        hidden
+                      />
 
-                  <input
-                    placeholder="id"
-                    name="_id"
-                    type="text"
-                    defaultValue={currentProduct._id}
-                    onChange={handleChangeName}
-                    hidden
-                  />
+                      <input
+                        placeholder="name"
+                        name="name"
+                        type="text"
+                        defaultValue={currentProduct.name}
+                        onChange={handleChangeName}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      />
+                      <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-breen-700 dark:focus:ring-green-800">Update Product Name</button>
 
-                  <input
-                    placeholder="name"
-                    name="name"
-                    type="text"
-                    defaultValue={currentProduct.name}
-                    onChange={handleChangeName}
-                  />
-                  <button type="submit">Update Product Name</button>
+                    </div>
+                  </div>
                 </form>
 
 
 
                 <form onSubmit={handleFormSubmitEditProductPrice}>
+                  <div className="grid gap-6 mb-6 md:grid-cols-3">
+                    <div>
+                      <input
+                        placeholder="id"
+                        name="_id"
+                        type="text"
+                        defaultValue={currentProduct._id}
+                        onChange={handleChangePrice}
+                        hidden
+                      />
 
-                  <input
-                    placeholder="id"
-                    name="_id"
-                    type="text"
-                    defaultValue={currentProduct._id}
-                    onChange={handleChangePrice}
-                    hidden
-                  />
+                      <input
+                        placeholder="price"
+                        name="price"
+                        type="number"
+                        defaultValue={currentProduct.price}
+                        onChange={handleChangePrice}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 
-                  <input
-                    placeholder="price"
-                    name="price"
-                    type="number"
-                    defaultValue={currentProduct.price}
-                    onChange={handleChangePrice}
-                  />
-                  <button type="submit">Update Product Price</button>
+                      />
+                      <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-breen-700 dark:focus:ring-green-800">Update Product Price</button>
+
+                    </div>
+
+                  </div>
+
                 </form>
 
                 <form onSubmit={handleFormSubmitEditProductQuantity}>
+                  <div className="grid gap-6 mb-6 md:grid-cols-3">
+                    <div>
+                      <input
+                        placeholder="id"
+                        name="_id"
+                        type="text"
+                        defaultValue={currentProduct._id}
+                        onChange={handleChangeQuantity}
+                        hidden
+                      />
 
-                  <input
-                    placeholder="id"
-                    name="_id"
-                    type="text"
-                    defaultValue={currentProduct._id}
-                    onChange={handleChangeQuantity}
-                    hidden
-                  />
+                      <input
+                        placeholder="quantity"
+                        name="quantity"
+                        type="number"
+                        defaultValue={currentProduct.quantity}
+                        onChange={handleChangeQuantity}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 
-                  <input
-                    placeholder="quantity"
-                    name="quantity"
-                    type="number"
-                    defaultValue={currentProduct.quantity}
-                    onChange={handleChangeQuantity}
-                  />
-                  <button type="submit">Update Product Quantity</button>
+                      />
+                      <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-breen-700 dark:focus:ring-green-800">Update Product Quantity</button>
+
+                    </div>
+                  </div>
+
+
                 </form>
 
                 <form onSubmit={handleFormSubmitEditProductDescription}>
+                  <div className="grid gap-6 mb-6 md:grid-cols-3">
+                    <div >
+                      <input
+                        placeholder="id"
+                        name="_id"
+                        type="text"
+                        defaultValue={currentProduct._id}
+                        onChange={handleChangeDescripion}
+                        hidden
+                      />
 
-                  <input
-                    placeholder="id"
-                    name="_id"
-                    type="text"
-                    defaultValue={currentProduct._id}
-                    onChange={handleChangeDescripion}
-                    hidden
-                  />
+                      <textarea
+                        placeholder="description"
+                        name="description"
+                        type="text"
+                        defaultValue={currentProduct.description}
+                        onChange={handleChangeDescripion}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 
-                  <textarea
-                    placeholder="description"
-                    name="description"
-                    type="text"
-                    defaultValue={currentProduct.description}
-                    onChange={handleChangeDescripion}
-                  />
-                  <button type="submit">Update Product Description</button>
+                      />
+
+                      <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-breen-700 dark:focus:ring-green-800">Update Product Description</button>
+
+                    </div>
+
+                  </div>
+
                 </form>
 
-                <button type='button' onClick={handleFormSubmitDeleteProduct}>DELETE PRODUCT</button>
 
               </div>
-
+              <div className='dltBtn'>
+                <button type='button' onClick={handleFormSubmitDeleteProduct} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">DELETE PRODUCT</button>
+              </div>
 
             </div>
           ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}

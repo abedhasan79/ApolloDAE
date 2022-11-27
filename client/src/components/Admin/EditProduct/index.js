@@ -10,8 +10,9 @@ import {
 import { QUERY_PRODUCTS, QUERY_USER } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
 import spinner from '../../../assets/spinner.gif';
-import {  EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
+import { EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_IMAGE, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
 import { DELETE_PRODUCT } from '../../../utils/mutations';
+import axios from 'axios';
 
 const style = {
   MT: {
@@ -29,12 +30,26 @@ function EditProduct() {
 
   const { products } = state;
 
-  
+
   const [deleteProduct] = useMutation(DELETE_PRODUCT);
   const [editProductName] = useMutation(EDIT_PRODUCT_NAME);
   const [editProductDescription] = useMutation(EDIT_PRODUCT_DESCRIPTION);
   const [editProductPrice] = useMutation(EDIT_PRODUCT_PRICE);
   const [editProductQuantity] = useMutation(EDIT_PRODUCT_QUANTITY);
+  const [editProductImage] = useMutation(EDIT_PRODUCT_IMAGE, {
+    update(cache, { data: { editProductImage } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductImage, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
 
   const { data: data2 } = useQuery(QUERY_USER);
 
@@ -70,27 +85,60 @@ function EditProduct() {
     {
       _id: '',
       name: ''
-    });
+    }
+  );
 
   const [formStateDescription, setFormStateDescription] = useState(
     {
       _id: '',
       description: ''
-    });
+    }
+  );
 
   const [formStatePrice, setFormStatePrice] = useState(
     {
       _id: '',
       price: ''
-    });
+    }
+  );
 
   const [formStateQuantity, setFormStateQuantity] = useState(
     {
       _id: '',
       quantity: ''
-    });
+    }
+  );
 
-  
+  // const [formStateImage, setFormStateImage] = useState(
+  //   {
+  //     _id: '',
+  //     image:''
+  //   }
+  // );
+
+  const [imagee, setImagee] = useState("");
+  const [url, setUrl] = useState("");
+  const [formStateImage, setFormStateImage] = useState(
+    {
+      _id: '',
+      image: url
+    }
+  );
+
+
+  const handleformSubmitEditProductImage = async (event) => {
+    event.preventDefault();
+
+    const data = new FormData();
+    data.append("file", imagee);
+    data.append("upload_preset", "h1eyn8ot");
+    data.append("cloud__name", "dh9lklwph");
+    await fetch("https://api.cloudinary.com/v1_1/dh9lklwph/image/upload", { method: "post", body: data })
+      .then(res => res.json())
+      .then(data => { editProductImage({ variables: { id: currentProduct._id, image: data.url } }); setUrl(data.url) })
+      .catch(err => console.log(err));
+
+  }
 
   const handleFormSubmitEditProductName = async (event) => {
     event.preventDefault();
@@ -159,7 +207,7 @@ function EditProduct() {
       console.log(e);
     }
   };
-  
+
 
   const handleChangeName = (event) => {
     const { name, value } = event.target;
@@ -189,6 +237,15 @@ function EditProduct() {
     const { name, value } = event.target;
     setFormStateQuantity({
       ...formStateQuantity,
+      [name]: value,
+    });
+  };
+
+  const handleChangeImage = (event) => {
+
+    const { name, value } = event.target;
+    setFormStateImage({
+      ...formStateImage,
       [name]: value,
     });
   };
@@ -229,9 +286,31 @@ function EditProduct() {
               <Link to="/admin">← Back to Products</Link>
               <div>
                 <img
-                  src={`/images/${currentProduct.image}`}
+                  src={url}
                   alt={currentProduct.name}
+
                 />
+
+                <form onSubmit={handleformSubmitEditProductImage}>
+
+                  <input
+                    placeholder="id"
+                    name="_id"
+                    type="text"
+                    defaultValue={currentProduct._id}
+                    hidden
+                    onChange={handleChangeImage}
+                  />
+
+                  <input
+                    placeholder="name"
+                    name="image"
+                    type="file"
+                    onChange={(e) => setImagee(e.target.files[0])}
+
+                  />
+                  <button type="submit" >Update Product Image</button>
+                </form>
 
                 <form onSubmit={handleFormSubmitEditProductName}>
 
@@ -254,7 +333,7 @@ function EditProduct() {
                   <button type="submit">Update Product Name</button>
                 </form>
 
-                
+
 
                 <form onSubmit={handleFormSubmitEditProductPrice}>
 

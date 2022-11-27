@@ -321,8 +321,11 @@ function EditProduct() {
   if (!data2 || !data2.user.isAdmin) {
     return (
       <>
-        <div style={style.MT}>
-          <a href='/'>MUST BE A ADMIN TO USE THIS PAGE. CLICK HERE TO GO BACK TO HOME PAGE</a>
+        <div className="adminContainer">
+          <h1 className="message">YOU NEED TO LOG IN AS A ADMIN TO USE THIS PAGE.
+
+            <hr className="goBack"></hr><Link to='/' ><i className=" adminArrow  fa-regular fa-square-caret-left"></i> </Link>
+          </h1>
         </div>
       </>
     );

@@ -7,7 +7,7 @@ import './box.css'
 
 export const Testing = () => {
   useEffect(() => {
-    Aos.init({ duration: 3000 })
+    Aos.init({ duration: 5000 })
   }, [])
   return (
     <div>

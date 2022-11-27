@@ -43,11 +43,11 @@ code {
 /**************/
 .dark-mode{
   --primary: #f7d775;
-  --bg-color: #02325c;
+  --bg-color: #000204;
   --bg-form: #42414d;
   --shadow:  rgb(9, 27, 36);
   --text-color: rgb(255, 255, 255);
-  --background: url(../src/assets/darkbg.jpg);
+  --background: url(../src/assets/darkbg.png);
 }
 .light-mode{
   --primary: #000000;

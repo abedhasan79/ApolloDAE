@@ -23,7 +23,7 @@ export function Privacy () {
           <div onClick={toggleModal} className='overlay'></div>
           <div className='modal-content'>
             <h1 style={{color: "black", fontWeight: 'bolder', fontSize: "20px"}}>Privacy Policy</h1>
-            <p>
+            <p style={{color: "black"}}>
               for ApolloDAE At ApolloDAE, accessible from
               apollodae-heroku.com, one of our main priorities is the privacy of
               our visitors. This Privacy Policy document contains types of

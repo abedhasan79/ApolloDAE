@@ -1,32 +1,47 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Login } from '../Login'
 import Cart from '../Cart'
 import { Contact } from '../Contact'
 import Searchbar from '../Serchbar'
-import Auth from "../../utils/auth";
-import { Link } from "react-router-dom";
+import Auth from '../../utils/auth'
+import { Link } from 'react-router-dom'
 import { QUERY_USER } from '../../utils/queries'
 import { useQuery } from '@apollo/client'
 
-const Nav = () => {
-  const { data: data2 } = useQuery(QUERY_USER);
-  console.log(data2);
-  let Links;
-  if (!data2 || !data2.user.isAdmin) {
+const Nav = ({ data: data2 }) => {
+  let Links = []
+  if (data2 && data2.user.isAdmin) {
+    Links = [
+      { name: 'Dashboard', link: '/admin' },
+      {
+        name: !Auth.loggedIn() ? (
+          <Login />
+        ) : (
+          <a onClick={() => Auth.logout()} href='/'>
+            Logout
+          </a>
+        )
+      }
+    ]
+  } else {
     Links = [
       { name: 'Home', link: '/' },
       { name: <Contact /> },
-      { name: !Auth.loggedIn() ? <Login /> : <a onClick={() => Auth.logout()} href="/" >Logout</a> },
-      { name: Auth.loggedIn() ? <Link to="/orderHistory">Orders</Link> : null },
+      {
+        name: !Auth.loggedIn() ? (
+          <Login />
+        ) : (
+          <a onClick={() => Auth.logout()} href='/'>
+            Logout
+          </a>
+        )
+      },
+      {
+        name: Auth.loggedIn() ? <Link to='/orderHistory'>Orders</Link> : null
+      },
       { name: <Cart /> }
     ]
-  }else if(data2 && data2.user.isAdmin){
-    Links = [
-      { name: 'Home', link: '/admin' },
-      { name: !Auth.loggedIn() ? <Login /> : <a onClick={() => Auth.logout()} href="/" >Logout</a> }
-    ]
   }
-
 
   return (
     <div className='shadow-md w-full fixed top-0 left-0'>
@@ -34,7 +49,8 @@ const Nav = () => {
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
           <a href='/'>
             {' '}
-            <span class="text-white">Apollo</span><span class='text-blue-400'>D</span>
+            <span class='text-white'>Apollo</span>
+            <span class='text-blue-400'>D</span>
             <span class='text-purple-500'>A</span>
             <span class='text-fuchsia-300'>E</span>
           </a>
@@ -67,10 +83,9 @@ const Nav = () => {
                 d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
               />
             </svg>
-            <Searchbar/>
+            <Searchbar />
           </div>
         </form>
-       
       </div>
     </div>
   )

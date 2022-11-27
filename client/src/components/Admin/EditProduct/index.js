@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
-
-
 import { useStoreContext } from '../../../utils/GlobalState';
 import {
   UPDATE_PRODUCTS,
 } from '../../../utils/actions';
 import { QUERY_PRODUCTS, QUERY_USER } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
-import spinner from '../../../assets/spinner.gif';
 import { EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_IMAGE, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
 import { DELETE_PRODUCT } from '../../../utils/mutations';
 
@@ -401,7 +398,6 @@ function EditProduct() {
 
             </div>
           ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}
-          {loading ? <img src={spinner} alt="loading" /> : null}
         </div>
       </>
     );

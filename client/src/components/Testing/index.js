@@ -6,7 +6,7 @@ export const Testing = () => {
   return (
     <div>
       <h1 className="glow">Featured Mens Fashion</h1>
-      <div className='fade-in-image drop-shadow-xl'>
+      <div className='fade-in-image'>
         <img src={MenFashion} />
         <h1
           class='bg-white text-blue-900'

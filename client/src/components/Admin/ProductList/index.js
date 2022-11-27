@@ -46,7 +46,7 @@ function ProductList() {
 
   return (
     <div className="my-1">
-      <h2 className='editprotext'>Click on a Product below to update information</h2>
+      <h2 className='editprotext'>**Click on a Product below to update information**</h2>
       {state.products.length ? (
         <div className="placeRowAdmin">
           {filterProducts().map((product) => (

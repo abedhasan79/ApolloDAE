@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import './detail.css';
-import Cart from '../components/Cart';
 import { useStoreContext } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
@@ -111,7 +110,7 @@ function Detail() {
             </div>
             <div>
               <img className='column'
-                src={`${currentProduct.image}`}
+                src={`/${currentProduct.image}`}
                 alt={currentProduct.name}
               />
             </div>

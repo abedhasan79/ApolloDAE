@@ -46,15 +46,15 @@ code {
   --bg-color: #02325c;
   --bg-form: #42414d;
   --shadow:  rgb(9, 27, 36);
-  --text-color: rgb(10, 10, 10);
+  --text-color: rgb(255, 255, 255);
+  --background: url(../src/assets/darkbg.jpg);
 }
 .light-mode{
   --primary: #000000;
   --bg-color: #fdfdfd;
   --bg-form: #f6f7f9;
   --shadow:  #d0d0d0;
-  --background: url(../public/images/darkbg.jpg);
-  --text-color: rgb(252, 252, 252);
+  --text-color: rgb(0, 0, 0);
 }
 :focus{
   outline: none;

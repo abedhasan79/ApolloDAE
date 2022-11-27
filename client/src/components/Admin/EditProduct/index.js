@@ -285,11 +285,7 @@ function EditProduct() {
             <div className="container my-1">
               <Link to="/admin">← Back to Products</Link>
               <div>
-                <img
-                  src={url}
-                  alt={currentProduct.name}
-
-                />
+                
 
                 <form onSubmit={handleformSubmitEditProductImage}>
 

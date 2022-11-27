@@ -24,8 +24,10 @@
 
 
 .fadeimage { 
-    border: solid rgb(89, 89, 89);
+    margin-top:20px;
+    border: 1px solid rgb(176, 173, 173);
     max-height: 500px;
+    justify-content: center;
     display: flex;
 }
 

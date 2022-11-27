@@ -109,7 +109,7 @@ function Detail() {
               </div>
             </div>
             <div>
-              <img className='column'
+              <img className='column singleProductImg'
                 src={`/${currentProduct.image}`}
                 alt={currentProduct.name}
               />

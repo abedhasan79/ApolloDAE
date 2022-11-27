@@ -13,10 +13,14 @@ const Admin = () => {
 
   return (
 
-    <div >
+    <div className="dashAdmin">
       {data && data.user.isAdmin ? (
-        <div>
-          welcome to Admin
+        <div >
+          <div className="welcome">
+            <h1 >
+              Welcome to Admin. Add a product or click on a Product to update information
+            </h1>
+          </div>
           <AddProductFrom />
           <ProductList />
         </div>

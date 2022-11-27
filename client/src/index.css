@@ -154,3 +154,9 @@ html,body{
   color: red;
   cursor: pointer;
 }
+
+@media screen and (max-width:259) {
+  footer{
+    width: 110vh;
+  }
+}

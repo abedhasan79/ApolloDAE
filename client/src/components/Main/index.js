@@ -21,7 +21,7 @@ export const Main = () => {
     return (
       <div>
         <Nav data={data} />
-        <SideBar />
+        
         <Routes>
           <Route path='/admin' element={<Admin />} />
           <Route path='/' element={<Home />} />
@@ -34,6 +34,7 @@ export const Main = () => {
           <Route path='*' element={<NoMatch />} />
         </Routes>
         <Footer />
+        <SideBar />
       </div>
     )
   } else {

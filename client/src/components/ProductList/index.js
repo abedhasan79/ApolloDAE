@@ -6,8 +6,15 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import './style.css';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 function ProductList() {
+  useEffect(() => {
+  Aos.init({ duration: 3000 })
+}, [])
+
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;

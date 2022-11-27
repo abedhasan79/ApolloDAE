@@ -1,0 +1,50 @@
+.adminContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+   margin-bottom: 311.4px;
+   
+}
+
+.goBack{
+
+
+  width:250px;
+margin-left: auto;
+margin-right: auto;
+  border: 2px solid rgb(16, 1, 26);
+  
+    
+}
+
+.message{
+    position: relative;
+    margin-top: -60px;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    flex-direction: column;
+  line-height: 100px;
+    font-family: 'Nova Flat';
+    font-size: 30px;
+    
+}
+
+.adminArrow{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: 375px;
+    font-size: 60px;
+    color: rgb(75, 22, 22);
+   
+}
+
+@media screen and (max-width: 731px) {
+    .adminArrow{
+        display:flex;
+        flex-wrap: wrap;
+        margin-left: 200px;
+        font-size: 60px;
+        color: rgb(75, 22, 22);
+  }
+}

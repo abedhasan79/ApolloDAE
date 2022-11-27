@@ -7,16 +7,17 @@ import { useQuery } from "@apollo/client";
 import spinner from '../assets/spinner.gif'
 import { useStoreContext } from '../utils/GlobalState';
 import { Link } from "react-router-dom";
-const style = {
-    hw: {
-        marginTop: '10vh'
-    },
+import './admin.css';
+// const style = {
+//     hw: {
+//         marginTop: '10vh'
+//     },
 
-    hw2:{
-        marginTop: '10vh',
-        marginBottom: '10vh'
-    }
-}
+//     hw2:{
+//         marginTop: '10vh',
+//         marginBottom: '10vh'
+//     }
+// }
 
 const Admin = () => {
 
@@ -26,7 +27,7 @@ const Admin = () => {
 
     return (
 
-        <div className="container" style={style.hw2}>
+        <div >
             {data && data.user.isAdmin? (
                 <div>
                     welcome to Admin
@@ -34,7 +35,18 @@ const Admin = () => {
                     <ProductList />
                 </div>
             ):(
-                <Link to='/' > YOU NEDD TO LOG IN AS A ADMIN TO USE THIS PAGE. CLICK HERE TO GO BACK TO HOME PAGE.</Link>
+                <>
+                <div className="adminContainer">
+                   
+                <h1 className="message">YOU NEED TO LOG IN AS A ADMIN TO USE THIS PAGE.
+                
+                <hr className="goBack"></hr><Link to='/' ><i className=" adminArrow  fa-regular fa-square-caret-left"></i> </Link>
+</h1>
+             
+                
+               
+                </div>
+                </>
             )}
             
         </div>

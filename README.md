@@ -1,9 +1,8 @@
 ## <p align="center"> **🌃ApolloDAE🛍️** </p>
 
 ## Overview
+ApolloDAE, your new favorite E-commerce website to shop at! Get the latest update on trending fashion, games and many more. Easy to navigate and polished UI experience, you can now up your shopping game! For Admins, you can now rest with ease knowing ApolloDAE is fully functional and user friendly with the help of todays hot technologies from behind the scenes.
 
-
-### Table of Contents
 - [Technology](#technology)
 - [UserStory](#userstory)
 - [Wireframe](#wireframe)
@@ -12,15 +11,24 @@
 - [Questions](#questions)
 - [License](#license)
 ## Technology
+1. GraphQL
+2. MongoDB
+3. Apollo Client
+4. JWT
+5. React
+6. TailWindCss
+7. Javascript
+8. NodeJS
+
 
 ## UserStory
-```As an admin of an ecommerce website 
-I want the ecommerce platform to be reliable and easily accessible
+```As an admin of an E-commerce website 
+I want the E-commerce platform to be reliable and easily accessible
 So that new users/existing users can shop with a smooth experience.
 ```
 ## Acceptance Criteria
 ```
-- Given an ecommerce website
+- Given an E-commerce website
 - When I access the website for the first time
 - THEN I AM able to see a category, search bar, contact, and a signup/login as well as featured products on the homepage
 - WHEN I click on the category section a list of products should appear 
@@ -44,10 +52,9 @@ So that new users/existing users can shop with a smooth experience.
 - THEN I have the option to add new items, update stock, and remove item from the website
 ```
 
-
 ## Wireframe
 
-Wireframe will be adjusted
+Wireframe is subject to change.
 
 ![9e1cab820c6803e6089f29d6531dd485](https://user-images.githubusercontent.com/109758045/204072416-2a5f35b6-3dda-468a-a75a-585702b2c5df.png)
 ![5b69aa4f3555dcea48907d2c3a4a1a00](https://user-images.githubusercontent.com/109758045/204072417-e3accce6-2a83-4cc0-a155-450ed491804d.png)
@@ -60,12 +67,24 @@ Wireframe will be adjusted
 ![134b3beae5244505458298a93a38d83e](https://user-images.githubusercontent.com/109758045/204072424-e7cb25ea-c081-4753-8f6f-ee7c3e1f6bf9.png)
 
 ## Future plans
+ApolloDAE is a startup E-commerce website. Future updates will be added unless stated otherwise. ApolloDAE updates will soon include the following:
 
+1. Profile (users can access their account remove/add payment and add a profile image)
+
+2. Add a subscription where users who want to sell can start selling rather than just being able to buy.
+
+3. Shipping and given estimated dates.
+
+4. And many more to come.. Stay Tuned!
 ## Installations
 N/A
 
 ## Usage
 To access ApolloDAE simply scroll down, there it will display a link url to the website or you can type in "..." in your url and it will direct you to the home page! User's will need to create an account before being able to checkout. After an account has been created, users can freely navigate shop as much as they want. Admin users can edit, create and delete products.
+
+Deployed Link:
+
+![apollodae](https://user-images.githubusercontent.com/109758045/204158428-9baffb0f-3389-4700-a6b6-e7917004f263.png)
 
 ## Questions
 Feel free to contact us if you have any questions or concerns!

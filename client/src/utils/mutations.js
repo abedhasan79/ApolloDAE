@@ -107,6 +107,14 @@ mutation EditProductQuantity($id: ID!, $quantity: Int!) {
 }
 `;
 
+export const EDIT_PRODUCT_IMAGE = gql`
+mutation EditProductImage($id: ID!, $image: String!) {
+  editProductImage(_id: $id, image: $image) {
+    image
+  }
+}
+`;
+
 export const DELETE_PRODUCT = gql`
 mutation Mutation($id: ID!) {
   deleteProduct(_id: $id) {

@@ -57,6 +57,7 @@ const typeDefs = gql`
     editProductDescription(_id:ID!, description: String!): Product
     editProductPrice(_id:ID!, price:Float!): Product
     editProductQuantity(_id:ID!, quantity:Int!): Product
+    editProductImage(_id:ID!, image:String!): Product
     deleteProduct(_id:ID!): Product
     addOrder(products: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User

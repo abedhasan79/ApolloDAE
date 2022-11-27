@@ -132,6 +132,14 @@ const resolvers = {
         { new: true },
       );
     },
+    editProductImage: async (parent, {_id, image}) => {
+      return await Product.findByIdAndUpdate(
+        _id,
+        {$set: {image: image}},
+        { new: true },
+      );
+    },
+    
     deleteProduct: async (parent, { _id }) => {
       return await Product.findByIdAndDelete(_id);
     },

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 
 const featuredProducts = [
+
     'img1.jpg', 
-    'img3.jpg'
+    'img3.jpg',
 ]
 
 let count = 0

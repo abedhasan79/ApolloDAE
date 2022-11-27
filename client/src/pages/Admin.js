@@ -9,33 +9,35 @@ import './admin.css';
 
 const Admin = () => {
 
-    const { data } = useQuery(QUERY_USER);
+  const { data } = useQuery(QUERY_USER);
 
-    return (
+  return (
 
-        <div >
-            {data && data.user.isAdmin? (
-                <div>
-                    welcome to Admin
-                    <AddProductFrom />
-                    <ProductList />
-                </div>
-            ):(
-                <>
-                <div className="adminContainer">
-                   
-                <h1 className="message">YOU NEED TO LOG IN AS A ADMIN TO USE THIS PAGE.
-                
-                <hr className="goBack"></hr><Link to='/' ><i className=" adminArrow  fa-regular fa-square-caret-left"></i> </Link>
-</h1>
-             
-                
-               
-                </div>
-                </>
-                )
-            )}
-            
+    <div >
+      {data && data.user.isAdmin ? (
+        <div>
+          welcome to Admin
+          <AddProductFrom />
+          <ProductList />
+        </div>
+      ) : (
+        <>
+          <div className="adminContainer">
+
+            <h1 className="message">YOU NEED TO LOG IN AS A ADMIN TO USE THIS PAGE.
+
+              <hr className="goBack"></hr><Link to='/' ><i className=" adminArrow  fa-regular fa-square-caret-left"></i> </Link>
+            </h1>
+
+
+
+          </div>
+        </>
+      )}
+    </div>
+  );
+
+}
 
 
 export default Admin

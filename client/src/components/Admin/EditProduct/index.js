@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
-
-
 import { useStoreContext } from '../../../utils/GlobalState';
 import {
   UPDATE_PRODUCTS,
 } from '../../../utils/actions';
 import { QUERY_PRODUCTS, QUERY_USER } from '../../../utils/queries';
 import { idbPromise } from '../../../utils/helpers';
-import spinner from '../../../assets/spinner.gif';
 import { EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_IMAGE, EDIT_PRODUCT_NAME, EDIT_PRODUCT_PRICE, EDIT_PRODUCT_QUANTITY } from '../../../utils/mutations';
 import { DELETE_PRODUCT } from '../../../utils/mutations';
 
@@ -32,10 +29,62 @@ function EditProduct() {
 
 
   const [deleteProduct] = useMutation(DELETE_PRODUCT);
-  const [editProductName] = useMutation(EDIT_PRODUCT_NAME);
-  const [editProductDescription] = useMutation(EDIT_PRODUCT_DESCRIPTION);
-  const [editProductPrice] = useMutation(EDIT_PRODUCT_PRICE);
-  const [editProductQuantity] = useMutation(EDIT_PRODUCT_QUANTITY);
+  const [editProductName] = useMutation(EDIT_PRODUCT_NAME, {
+    update(cache, { data: { editProductName } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductName, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
+  const [editProductDescription] = useMutation(EDIT_PRODUCT_DESCRIPTION, {
+    update(cache, { data: { editProductDescription } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductDescription, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
+  const [editProductPrice] = useMutation(EDIT_PRODUCT_PRICE, {
+    update(cache, { data: { editProductPrice } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductPrice, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
+  const [editProductQuantity] = useMutation(EDIT_PRODUCT_QUANTITY, {
+    update(cache, { data: { editProductQuantity } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductQuantity, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
   const [editProductImage] = useMutation(EDIT_PRODUCT_IMAGE, {
     update(cache, { data: { editProductImage } }) {
       try {
@@ -401,7 +450,6 @@ function EditProduct() {
 
             </div>
           ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}
-          {loading ? <img src={spinner} alt="loading" /> : null}
         </div>
       </>
     );

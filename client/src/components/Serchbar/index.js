@@ -10,9 +10,7 @@ import './style.css';
 
 const Searchbar = () => {
     const { data: data1 } = useQuery(QUERY_USER);
-    console.log(data1);
     const { data } = useQuery(QUERY_PRODUCTS);
-    console.log(data);
 
 
     const [state, setstate] = useState([]);

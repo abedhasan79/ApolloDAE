@@ -1,4 +1,4 @@
-// import React from 'react'
+//import all required 
 import { useState } from 'react'
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
@@ -44,12 +44,7 @@ const SideBar = () => {
     });
   };
 
-
-
-
-
   const [isOpen, setIsOpen] = useState(false);
-
 
   return (
     <>
@@ -78,12 +73,6 @@ const SideBar = () => {
       >
         <h2 className='text-2xl text-white'>Categories</h2>
         <ul>
-          {/* {Categories.map((category) => (
-                <li key={category.name} className="text-gray-300 text-sm">
-                    <a href={category.link} className='text-red-800 hover:text-blue-400 duration-500'>{category.name}</a>
-                    </li>
-            ))} */}
-
           {categories.map((item) => (
             <li className=''
               key={item._id}

@@ -1,14 +1,37 @@
-import React, { useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 import { Login } from '../Login'
 import Cart from '../Cart'
 import { Contact } from '../Contact'
 import Searchbar from '../Serchbar'
 import Auth from '../../utils/auth'
 import { Link } from 'react-router-dom'
-import { QUERY_USER } from '../../utils/queries'
-import { useQuery } from '@apollo/client'
 
 const Nav = ({ data: data2 }) => {
+
+const [prevScrollPos, setPrevScrollPos] = useState(0)
+const [visible, setVisible] = useState(true)
+
+const handleScroll = () => {
+  const currentScrollPos = window.scrollY
+
+  if (currentScrollPos > prevScrollPos) {
+    setVisible(false)
+  } else {
+    setVisible(true)
+  }
+
+  setPrevScrollPos(currentScrollPos)
+}
+
+useEffect(() => {
+  window.addEventListener('scroll', handleScroll)
+
+  return () => window.removeEventListener('scroll', handleScroll)
+})
+
+
+
+
   let Links = []
   if (data2 && data2.user.isAdmin) {
     Links = [
@@ -44,7 +67,7 @@ const Nav = ({ data: data2 }) => {
   }
 
   return (
-    <div className='shadow-md w-full fixed top-0 left-0'>
+    <div className={`bg-slate-700 h-14 sticky ${visible ? 'top-0' : ''} `}>
       <div className='md:flex items-center bg-sky-900 py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
           <a href='/'>

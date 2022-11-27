@@ -50,11 +50,11 @@ function ProductItem(item) {
         <p className="prodName">{name}</p>
       </Link>
       <div>
-        <div className="inStock">{quantity} {pluralize("item", quantity)} in stock</div>
+        <div className="inStock">{quantity} {pluralize("item", quantity)} in stock.</div>
         <span>${price}</span>
       </div>
       <div className="positionBtn">
-      <button className="a" onClick={addToCart}>Add to cart</button>
+      <button class="bg-white hover:bg-green-600 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={addToCart}>Add to cart</button>
       </div>
     </div>
   );

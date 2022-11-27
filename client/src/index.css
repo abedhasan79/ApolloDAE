@@ -42,16 +42,19 @@ code {
 /*light/darkmode*/
 /**************/
 .dark-mode{
-  --primary: #9b9ba2;
-  --bg-color: #2d2d2f;
+  --primary: #f7d775;
+  --bg-color: #02325c;
   --bg-form: #42414d;
   --shadow:  rgb(9, 27, 36);
+  --text-color: rgb(10, 10, 10);
 }
 .light-mode{
-  --primary: #5454e9;
+  --primary: #000000;
   --bg-color: #fdfdfd;
   --bg-form: #f6f7f9;
   --shadow:  #d0d0d0;
+  --background: url(../public/images/darkbg.jpg);
+  --text-color: rgb(252, 252, 252);
 }
 :focus{
   outline: none;
@@ -66,7 +69,8 @@ html,body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-color);
+  background: var(--background);
+  color: var(--text-color);
 }
 .theme-switch{
   position: fixed;
@@ -96,9 +100,9 @@ html,body{
 
 .footerbtn {
   width: 100%;
-  background-color: rgb(255, 255, 255);
-  border-top: solid rgb(170, 166, 166);
-  /* margin-top: 400px; */
+  background-color: #0c4a6e;
+  border-top: solid rgb(0, 0, 0);
+  color: white;
 
 }
 

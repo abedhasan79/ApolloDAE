@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
 const featuredProducts = [
+<<<<<<< HEAD
     'img1.jpg', 
     'img3.jpg'
+=======
+    '/images/img1.jpg', 
+    '/images/img3.jpg',
+>>>>>>> 29ff6b8fa89727516eb367ae04c9efac5a904726
 ]
 
 let count = 0

@@ -29,10 +29,62 @@ function EditProduct() {
 
 
   const [deleteProduct] = useMutation(DELETE_PRODUCT);
-  const [editProductName] = useMutation(EDIT_PRODUCT_NAME);
-  const [editProductDescription] = useMutation(EDIT_PRODUCT_DESCRIPTION);
-  const [editProductPrice] = useMutation(EDIT_PRODUCT_PRICE);
-  const [editProductQuantity] = useMutation(EDIT_PRODUCT_QUANTITY);
+  const [editProductName] = useMutation(EDIT_PRODUCT_NAME, {
+    update(cache, { data: { editProductName } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductName, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
+  const [editProductDescription] = useMutation(EDIT_PRODUCT_DESCRIPTION, {
+    update(cache, { data: { editProductDescription } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductDescription, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
+  const [editProductPrice] = useMutation(EDIT_PRODUCT_PRICE, {
+    update(cache, { data: { editProductPrice } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductPrice, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
+  const [editProductQuantity] = useMutation(EDIT_PRODUCT_QUANTITY, {
+    update(cache, { data: { editProductQuantity } }) {
+      try {
+        const { products } = cache.readQuery({ query: QUERY_PRODUCTS });
+
+        cache.writeQuery({
+          query: QUERY_PRODUCTS,
+          data: { products: [editProductQuantity, ...products] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
   const [editProductImage] = useMutation(EDIT_PRODUCT_IMAGE, {
     update(cache, { data: { editProductImage } }) {
       try {

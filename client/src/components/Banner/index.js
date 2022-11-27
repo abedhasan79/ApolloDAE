@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const featuredProducts = [
     '/images/img1.jpg', 
-    '/images/img3.jpg'
+    '/images/img3.jpg',
 ]
 
 let count = 0

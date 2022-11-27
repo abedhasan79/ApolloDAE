@@ -45,10 +45,10 @@ function ProductList() {
   }
 
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
+    <div className="my-1">
+      <h2 className='editprotext'>Click on a Product below to update information</h2>
       {state.products.length ? (
-        <div className="placeRow">
+        <div className="placeRowAdmin">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

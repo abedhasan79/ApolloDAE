@@ -18,9 +18,10 @@ function ProductItem(item) {
   
 
   return (
-    <div className="theCard">
+    <div className="theCard px-1 py-1">
       <Link to={`/admin/products/${_id}`}>
         <img
+          className="productPic1"
           alt={name}
           src={`${image}`}
         />

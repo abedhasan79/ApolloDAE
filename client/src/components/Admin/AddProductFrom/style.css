@@ -1,0 +1,53 @@
+
+.addProForm input{
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.addProForm textarea{
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.addProForm select{
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.addProForm h2{
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+
+@media screen and (max-width: 692px) {
+    
+.addProForm input{
+    margin-left: 0vh;
+    margin-right: 0vh;
+}
+
+.addProForm textarea{
+    margin-left: 0vh;
+    margin-right: 0vh;
+}
+
+.addProForm select{
+    margin-left: 0vh;
+    margin-right: 0vh;
+}
+
+.addProForm h2{
+    margin-left: 0vh;
+    margin-right: 0vh;
+}
+}
+
+.addpro {
+    color: rgb(170, 36, 36);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 1vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}

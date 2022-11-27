@@ -1,5 +1,14 @@
-.placeRow{
+.placeRowAdmin{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 150px;
+    margin-top: 3vh;
+}
+
+.editprotext{
+    text-align: center;
+    color: rgb(187, 49, 49);
+    font-weight: bolder;
+    font-size: 20px;
 }

@@ -84,21 +84,21 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className='detailContainer'>
-          <Link className="linkBack" to="/">← Back to Products</Link>
+          <Link to="/"><i className="arrow fa-regular fa-square-caret-left"></i></Link>
           <div className="row">
 
-            <div className='column'>
-              <h2>{currentProduct.name}</h2>
+            <div className='column '>
+              <h2 className='prodName11'>{currentProduct.name}</h2>
 
-              <p>{currentProduct.description}</p>
+              <p className='proddesc'>{currentProduct.description}</p>
 
               <div className='priceDesc'>
-                <p>
-                  <strong>Price:</strong>${currentProduct.price}{' '}
+                <p className='prodPrice'>
+                  <strong className='prodPrice'>Price:</strong>${currentProduct.price}{' '}
 
                   <div className='addtoCart'>
-                    <button className='addThis' onClick={addToCart}>Add</button>
-                    <button className='deleteThis'
+                    <button className='  button-30 addThis' onClick={addToCart}>Add</button>
+                    <button  className='  button-30'
                       disabled={!cart.find((p) => p._id === currentProduct._id)}
                       onClick={removeFromCart}
                     >

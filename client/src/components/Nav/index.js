@@ -10,7 +10,7 @@ const Nav = ({ data: data2 }) => {
 
 const [prevScrollPos, setPrevScrollPos] = useState(0)
 const [visible, setVisible] = useState(true)
-
+//sets it so when users scroll navbar will disappear but once users scroll up it will reappear
 const handleScroll = () => {
   const currentScrollPos = window.scrollY
 

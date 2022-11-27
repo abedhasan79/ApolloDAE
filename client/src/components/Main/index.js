@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom'
-
 import Admin from '../../pages/Admin'
 import Home from '../../pages/Home'
 import Detail from '../../pages/Detail'
@@ -21,7 +20,7 @@ export const Main = () => {
     return (
       <div>
         <Nav data={data} />
-        <SideBar />
+        
         <Routes>
           <Route path='/admin' element={<Admin />} />
           <Route path='/' element={<Home />} />
@@ -34,6 +33,7 @@ export const Main = () => {
           <Route path='*' element={<NoMatch />} />
         </Routes>
         <Footer />
+        <SideBar />
       </div>
     )
   } else {

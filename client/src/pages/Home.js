@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ProductList from '../components/ProductList'
 import { Banner } from '../components/Banner'
 import { Testing } from "../components/Testing"
-
 import { FaMoon, FaSun } from 'react-icons/fa'
 
 const style = {

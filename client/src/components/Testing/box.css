@@ -23,14 +23,16 @@
 }
 
 
-.fade-in-image { 
+.fadeimage { 
     border: solid rgb(89, 89, 89);
     max-height: 500px;
     display: flex;
+}
+
+
+#fade-in-header { 
     animation: fadeIn 5s; }
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-

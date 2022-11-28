@@ -1,0 +1,39 @@
+.placeRow1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin-bottom: 150px; */
+    /* margin-top: 200px; */
+}
+
+.my-2{
+margin-right: calc(1rem);;
+margin-left: calc(1rem);;
+}
+
+.userMessage{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    /* width: fit-content; */
+    justify-content: center;
+    /* flex-direction: column; */
+  line-height: 100px;
+    font-family: 'Nova Flat';
+    font-size: 30px;
+}
+
+.dateNow{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'serif';
+    font-size: 25px;
+}
+
+.adminContainer1{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+   
+}

@@ -4,11 +4,12 @@ import { Banner } from '../components/Banner'
 import { Testing } from "../components/Testing"
 import { FaMoon, FaSun } from 'react-icons/fa'
 
-const style = {
-  hw: {
-    marginTop: '15vh'
-  }
-}
+// const style = {
+//   hw: {
+//     marginTop: '15vh',
+//   },
+  
+// }
 
 const Home = () => {
   // const [darkMode, setDarkMode] = useState(false)
@@ -32,7 +33,7 @@ const Home = () => {
     //   </div>
 
     // </div>
-    <div style={style.hw}>
+    <div className="bannerMedia">
 
       <Banner />
       <div>
@@ -44,3 +45,5 @@ const Home = () => {
 }
 
 export default Home
+
+

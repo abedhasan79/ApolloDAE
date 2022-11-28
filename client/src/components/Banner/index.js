@@ -27,7 +27,7 @@ export const Banner = () => {
   }
 
   return (
-    <div className='max-w-7xl m-auto mb-20  select-none'>
+    <div className=' max-w-7xl m-auto mb-20  select-none'>
       <div>
         <img
           style={{ maxWidth: '79%', marginLeft: '10%' }}

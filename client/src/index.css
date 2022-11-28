@@ -5,10 +5,12 @@
 .fade-anim img {
   animation: fadeAnim 0.5s ease-out;
 }
+
 @keyframes fadeAnim {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -41,29 +43,34 @@ code {
 
 /*light/darkmode*/
 /**************/
-.dark-mode{
+.dark-mode {
   --primary: #f7d775;
   --bg-color: #000204;
   --bg-form: #42414d;
-  --shadow:  rgb(9, 27, 36);
+  --shadow: rgb(9, 27, 36);
   --text-color: rgb(255, 255, 255);
   --background: url(../src/assets/darkbg.png);
 }
-.light-mode{
+
+.light-mode {
   --primary: #000000;
   --bg-color: #fdfdfd;
   --bg-form: #f6f7f9;
-  --shadow:  #d0d0d0;
+  --shadow: #d0d0d0;
   --text-color: rgb(0, 0, 0);
 }
-:focus{
+
+:focus {
   outline: none;
 }
-html,body{
+
+html,
+body {
   margin: 0;
   padding: 0;
 }
-.app-container{
+
+.app-container {
   /* min-height: 100vh; */
   /* display: flex;
   align-items: center;
@@ -71,7 +78,8 @@ html,body{
   background: var(--background);
   color: var(--text-color);
 }
-.theme-switch{
+
+.theme-switch {
   position: fixed;
   top: 33px;
   left: 17px;
@@ -80,20 +88,23 @@ html,body{
   justify-content: center;
   height: 20px;
 }
-.theme-switch span{
+
+.theme-switch span {
 
   display: flex;
   color: var(--primary);
   font-weight: 600;
 }
-.theme-switch span:hover{
+
+.theme-switch span:hover {
   cursor: pointer;
 }
-.fa-icon{
-    color: var(--primary);
-    font-size: 15px;
-    cursor: pointer;
-  }
+
+.fa-icon {
+  color: var(--primary);
+  font-size: 15px;
+  cursor: pointer;
+}
 
 /************Footer***********************/
 
@@ -105,13 +116,13 @@ html,body{
 
 }
 
-.iconfooter{
+.iconfooter {
   margin-left: 5px;
 }
 
 /****contact***/
 
-.headers1{
+.headers1 {
   font-weight: bolder;
   color: red;
   font-size: 35px;
@@ -121,27 +132,27 @@ html,body{
 
 .headers2 {
   font-weight: bold;
-  color:rgb(9, 27, 36)
+  color: rgb(9, 27, 36)
 }
 
-.email1{
+.email1 {
   margin-top: 14px;
   font-weight: bold;
   color: blue;
 }
 
-.linkedIn{
+.linkedIn {
   margin-top: 15px;
   color: green;
   font-weight: bolder;
 }
 
-.names{
-  color:rgb(9, 27, 36);
+.names {
+  color: rgb(9, 27, 36);
   font-weight: bold;
 }
 
-.linkuser{
+.linkuser {
   color: rgb(24, 118, 21);
   text-decoration: underline;
 }
@@ -155,61 +166,69 @@ html,body{
 }
 
 @media screen and (max-width:259px) {
-  footer{
+  footer {
     width: 110vh;
   }
 }
 
 @media screen and (max-width:769px) {
- .nav2{
-  width: 700px;
-  margin-top: 10px
- }
+  .nav2 {
+    width: 700px;
+    margin-top: 10px
   }
+}
 
 @media screen and (max-width: 713px) {
- .nav2{
-  width: 650px;
-  margin-top: 10px
- }
+  .nav2 {
+    width: 650px;
+    margin-top: 10px
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .nav2 {
+    width: 600px;
+    margin-top: 10px
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .nav2 {
+    width: 400px;
+    margin-top: 10px
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .nav2 {
+    width: 260px;
+    margin-top: 10px
+  }
+}
+
+@media screen and (max-width:782px) {
+  .nav1 {
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .nav3 {
+    margin-left: 35%;
   }
 
-  @media screen and (max-width: 669px) {
- .nav2{
-  width: 600px;
-  margin-top: 10px
- }
+  .nav4 {
+    margin-left: 35%;
   }
+}
 
-    @media screen and (max-width: 620px) {
- .nav2{
-  width: 400px;
-  margin-top: 10px
- }
+@media screen and (max-width:430px) {
+  .bannerMedia {
+    margin-top: 10vh;
   }
+}
 
-     @media screen and (max-width: 428px) {
- .nav2{
-  width: 260px;
-  margin-top: 10px
- }
-  }
-
-  @media screen and (max-width:782px) {
- .nav1{
- display: inline-block;
- padding: 10px;
- }
-  }
-
-   @media screen and (max-width:768px) {
- .nav3{
-margin-left: 35%;
- }
- .nav4{
-  margin-left: 35%;
- }
-  }
-
-
-  
+.bannerMedia {
+  margin-top: 15vh;
+}

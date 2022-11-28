@@ -6,10 +6,10 @@ import { Terms } from "../Terms"
 export const Footer = () => {
   return (
     <div>
-      <footer class="bg-sky-900"> 
-      <a href='#'>
-        <button className="footerbtn">Back To Top</button>
-      </a>
+      <footer class="bg-sky-900">
+        <a href='#'>
+          <button className="footerbtn">Back To Top</button>
+        </a>
         <div class='md:flex md:justify-between'>
           <div class='mb-6 md:mb-0'>
             <a href='#' class='flex items-center'>
@@ -19,7 +19,7 @@ export const Footer = () => {
                 alt='apollo logo'
               />
               <span class='self-center text-2xl font-semibold whitespace-nowrap'>
-               <a href="/"> <span class="text-white">Apollo</span><span class="text-blue-400">D</span><span class="text-purple-500">A</span><span class="text-fuchsia-300">E</span></a>
+                <a href="/"> <span class="text-white">Apollo</span><span class="text-blue-400">D</span><span class="text-purple-500">A</span><span class="text-fuchsia-300">E</span></a>
               </span>
             </a>
           </div>

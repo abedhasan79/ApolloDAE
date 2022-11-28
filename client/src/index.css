@@ -49,7 +49,7 @@ code {
   --bg-form: #42414d;
   --shadow: rgb(9, 27, 36);
   --text-color: rgb(255, 255, 255);
-  --background: url(../src/assets/darkbg.png);
+  --background: url(../src/assets/dark.jpg);
 }
 
 .light-mode {
@@ -58,6 +58,7 @@ code {
   --bg-form: #f6f7f9;
   --shadow: #d0d0d0;
   --text-color: rgb(0, 0, 0);
+  --background: url(../src/assets/light2.jpg)
 }
 
 :focus {
@@ -71,12 +72,10 @@ body {
 }
 
 .app-container {
-  /* min-height: 100vh; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   background: var(--background);
   color: var(--text-color);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .theme-switch {

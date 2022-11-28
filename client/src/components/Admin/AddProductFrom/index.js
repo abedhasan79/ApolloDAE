@@ -47,7 +47,7 @@ const AddProductFrom = () => {
 
     return (
         <div className="container">
-            <div className="grid gap-20 mb-6 md:grid-cols-2">
+            <div className="prod grid gap-20 mb-6 md:grid-cols-2">
                 <form onSubmit={handleFormSubmit} className="addProForm">
                     <h2 className="addpro">Add a new Product</h2>
                     <div className="text-center">

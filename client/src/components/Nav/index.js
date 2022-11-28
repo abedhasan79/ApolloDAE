@@ -78,7 +78,7 @@ useEffect(() => {
             <span class='text-fuchsia-300'>E</span>
           </a>
         </div>
-        <ul className='md:flex md:items-center'>
+        <ul className='nav5 md:flex md:items-center'>
           {Links.map(link => (
             <li key={link.name} className='nav1 md:ml-8 text-xl'>
               <a

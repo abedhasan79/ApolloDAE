@@ -35,5 +35,12 @@ margin-left: calc(1rem);;
     display: flex;
     justify-content: center;
     margin-top: 40px;
-   
+}
+
+@media screen and (max-width:770px) {
+    .adminContainer1{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+    }
 }

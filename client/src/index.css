@@ -160,5 +160,56 @@ html,body{
   }
 }
 
+@media screen and (max-width:769px) {
+ .nav2{
+  width: 700px;
+  margin-top: 10px
+ }
+  }
+
+@media screen and (max-width: 713px) {
+ .nav2{
+  width: 650px;
+  margin-top: 10px
+ }
+  }
+
+  @media screen and (max-width: 669px) {
+ .nav2{
+  width: 600px;
+  margin-top: 10px
+ }
+  }
+
+    @media screen and (max-width: 620px) {
+ .nav2{
+  width: 400px;
+  margin-top: 10px
+ }
+  }
+
+     @media screen and (max-width: 428px) {
+ .nav2{
+  width: 260px;
+  margin-top: 10px
+ }
+  }
+
+  @media screen and (max-width:782px) {
+ .nav1{
+ display: inline-block;
+ padding: 10px;
+ }
+  }
+
+   @media screen and (max-width:768px) {
+ .nav3{
+margin-left: 35%;
+ }
+ .nav4{
+  margin-left: 35%;
+ }
+  }
 
 
+  

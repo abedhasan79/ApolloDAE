@@ -67,10 +67,10 @@ useEffect(() => {
   }
 
   return (
-    <div className={`bg-slate-700 h-14 sticky ${visible ? 'top-0' : ''} `}>
+    <div className={` bg-slate-700 h-14 sticky ${visible ? 'top-0' : ''} `}>
       <div className='md:flex items-center bg-sky-900 py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800'>
-          <a href='/'>
+          <a className="nav3" href='/'>
             {' '}
             <span class='text-white'>Apollo</span>
             <span class='text-blue-400'>D</span>
@@ -80,17 +80,17 @@ useEffect(() => {
         </div>
         <ul className='md:flex md:items-center'>
           {Links.map(link => (
-            <li key={link.name} className='md:ml-8 text-xl'>
+            <li key={link.name} className='nav1 md:ml-8 text-xl'>
               <a
                 href={link.link}
-                className='text-white hover:text-red-800 duration-500'
+                className='nav4 text-white hover:text-red-800 duration-500'
               >
                 {link.name}
               </a>
             </li>
           ))}
         </ul>
-        <form className='w-full px-4'>
+        <form className='nav2 w-full px-4'>
           <div className='relative'>
             <svg
               xmlns='http://www.w3.org/2000/svg'

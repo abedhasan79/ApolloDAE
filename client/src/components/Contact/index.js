@@ -25,9 +25,9 @@ export function Contact () {
             <h1 className="headers1">Contact Us</h1>
             <p className="headers2">Questions or Concerns? We operate from Mon-Sun 8am-4pm</p>
             <h1 className="email1">Email us:</h1>
-            <p className="names">Abed S: </p>
+            <p className="names">abedhasan79@gmail.com </p>
             <p className="names">Diana.vu@hotmail.com</p>
-            <p className="names">Esra A:</p>
+            <p className="names">alabduljabaresra0@gmail.com</p>
             <h1 className="linkedIn">LinkedIn</h1>
             <p className="linkuser">
               <a href='https://www.linkedin.com/in/abed-hasan-965497222/'>
@@ -40,7 +40,7 @@ export function Contact () {
             </p>
             <p className="linkuser">
               <a href='https://www.linkedin.com/in/esra-software-dev/'>
-                Esra Al
+                Esra Al-Abduljabar
               </a>
             </p>
             <button className='close-modal' onClick={toggleModal}>

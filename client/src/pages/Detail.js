@@ -11,9 +11,12 @@ import {
 } from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
+import validator from 'validator';
 
 
 function Detail() {
+  
+
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
@@ -79,7 +82,7 @@ function Detail() {
 
     idbPromise('cart', 'delete', { ...currentProduct });
   };
-
+  
   return (
     <>
       {currentProduct && cart ? (
@@ -110,7 +113,7 @@ function Detail() {
             </div>
             <div>
               <img className='column singleProductImg'
-                src={`/${currentProduct.image}`}
+                src={/^(ftp|http|https):\/\/[^ "]+$/.test(currentProduct.image)?`${currentProduct.image}`: `/${currentProduct.image}`}
                 alt={currentProduct.name}
               />
             </div>

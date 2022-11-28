@@ -6,8 +6,9 @@ ApolloDAE, your new favorite E-commerce website to shop at! Get the latest updat
 - [Technology](#technology)
 - [UserStory](#userstory)
 - [Wireframe](#wireframe)
-- [Tests](#tests)
+- [Usage](#usage)
 - [Roadmap](#roadmap)
+- [Installations](#installations)
 - [Questions](#questions)
 - [License](#license)
 ## Technology
@@ -66,7 +67,7 @@ Wireframe is subject to change.
 ![19b736a92d6e0c39c483f3f6d74de183](https://user-images.githubusercontent.com/109758045/204072423-96620202-4314-4247-87a9-772e0cfc6dff.png)
 ![134b3beae5244505458298a93a38d83e](https://user-images.githubusercontent.com/109758045/204072424-e7cb25ea-c081-4753-8f6f-ee7c3e1f6bf9.png)
 
-## Future plans
+## Roadmap
 ApolloDAE is a startup E-commerce website. Future updates will be added unless stated otherwise. ApolloDAE updates will soon include the following:
 
 1. Profile (users can access their account remove/add payment and add a profile image)

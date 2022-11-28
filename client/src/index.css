@@ -154,8 +154,11 @@ html,body{
   cursor: pointer;
 }
 
-@media screen and (max-width:259) {
+@media screen and (max-width:259px) {
   footer{
     width: 110vh;
   }
 }
+
+
+

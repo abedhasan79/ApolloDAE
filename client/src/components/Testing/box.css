@@ -22,6 +22,19 @@
   }
 }
 
+@media screen and (max-width: 873px){
+  .glow{
+    font-size: 40px
+  }
+  
+}
+
+@media screen and (max-width: 347px){
+  .glow{
+    font-size: 25px
+  }
+  
+}
 
 .fadeimage { 
     margin-top:20px;

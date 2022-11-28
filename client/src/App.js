@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, json } from 'react-router-dom'
 import {
   ApolloClient,
   InMemoryCache,
@@ -34,6 +34,20 @@ const client = new ApolloClient({
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(()=>{
+    const data = window.localStorage.getItem('MY_APP_STATE');
+    if (data !==null){
+      setDarkMode(JSON.parse(data));
+    }
+  }, []);
+  
+  useEffect(()=>{
+    window.localStorage.setItem('MY_APP_STATE', JSON.stringify(darkMode));
+  },[darkMode]);
+
+  
+
 
   return (
     <ApolloProvider client={client}>

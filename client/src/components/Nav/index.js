@@ -83,7 +83,7 @@ useEffect(() => {
             <li key={link.name} className='md:ml-8 text-xl'>
               <a
                 href={link.link}
-                className='text-white hover:text-gray-400 duration-500'
+                className='text-white hover:text-red-800 duration-500'
               >
                 {link.name}
               </a>

@@ -11,32 +11,33 @@ const style = {
 }
 
 const Home = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  // const [darkMode, setDarkMode] = useState(false)
 
   return (
-    <div
-      className={
-        darkMode ? 'app-container dark-mode' : 'app-container light-mode'
-      }
-    >
-      <div className='theme-switch'>
-        {!darkMode ? (
-          <span onClick={() => setDarkMode(!darkMode)}>
-            <FaMoon className='fa-icon' />
-          </span>
-        ) : (
-          <span onClick={() => setDarkMode(!darkMode)}>
-            <FaSun className='fa-icon' />
-          </span>
-        )}
-      </div>
-      <div style={style.hw}>
+    // <div
+    //   className={
+    //     darkMode ? 'app-container dark-mode' : 'app-container light-mode'
+    //   }
+    // >
+    //   <div className='theme-switch'>
+    //     {!darkMode ? (
+    //       <span onClick={() => setDarkMode(!darkMode)}>
+    //         <FaMoon className='fa-icon' />
+    //       </span>
+    //     ) : (
+    //       <span onClick={() => setDarkMode(!darkMode)}>
+    //         <FaSun className='fa-icon' />
+    //       </span>
+    //     )}
+    //   </div>
 
-        <Banner />
-        <div>
-          <Testing />
-          <ProductList />
-        </div>
+    // </div>
+    <div style={style.hw}>
+
+      <Banner />
+      <div>
+        <Testing />
+        <ProductList />
       </div>
     </div>
   )

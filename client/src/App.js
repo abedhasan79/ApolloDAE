@@ -11,6 +11,8 @@ import { setContext } from '@apollo/client/link/context'
 import { Main } from './components/Main'
 import { StoreProvider } from './utils/GlobalState'
 
+import { FaMoon, FaSun } from 'react-icons/fa'
+
 const httpLink = createHttpLink({
   uri: '/graphql'
 })
@@ -30,16 +32,37 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-function App () {
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <div>
-          <StoreProvider>
-            <Main />
-          </StoreProvider>
-        </div>
-      </Router>
+      <div
+        className={
+          darkMode ? 'app-container dark-mode' : 'app-container light-mode'
+        }
+      >
+
+        <Router>
+          <div>
+            <StoreProvider>
+              <Main />
+              <div className='theme-switch'>
+                {!darkMode ? (
+                  <span onClick={() => setDarkMode(!darkMode)}>
+                    <FaMoon className='fa-icon' />
+                  </span>
+                ) : (
+                  <span onClick={() => setDarkMode(!darkMode)}>
+                    <FaSun className='fa-icon' />
+                  </span>
+                )}
+              </div>
+            </StoreProvider>
+          </div>
+        </Router>
+      </div>
+
     </ApolloProvider>
   )
 }

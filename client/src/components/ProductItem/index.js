@@ -54,7 +54,7 @@ function ProductItem(item) {
         <span>${price}</span>
       </div>
       <div className="positionBtn">
-      <button class="bg-white hover:bg-green-600 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={addToCart}>Add to cart</button>
+      <button class="button-40" onClick={addToCart}>Add to cart</button>
       </div>
     </div>
   );

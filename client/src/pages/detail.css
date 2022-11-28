@@ -107,13 +107,13 @@
   .proddesc{
     font-family: 'serif';
     font-size: 35px;
-    color: rgb(50, 55, 133);
+    /* color: rgb(50, 55, 133); */
 }
 
 .prodName11{
     font-family: 'Nova Flat';
     font-size: 50px;
-    color: rgb(18, 14, 26);
+    /* color: rgb(18, 14, 26); */
 }
 
 .prodPrice{
@@ -181,6 +181,6 @@
 
 .arrow{
     font-size: 50px;
-    color: black;
+    color: rgb(158, 21, 21);
     margin-left: 10px;
 }

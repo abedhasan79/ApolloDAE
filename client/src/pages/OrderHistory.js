@@ -38,13 +38,21 @@ function OrderHistory() {
                       </Link>
                       <div>
                         <span>${price}</span>
+                        
                       </div>
+                     
                     </div>
+                    
                   ))}
+                  
                 </div>
+                
               </div>
+              
             ))}
+             <div className="pushDown"></div>
           </>
+          
         ) : null}
       </div>
     </>

@@ -5,6 +5,7 @@ import { Testing } from "../components/Testing"
 import { FaMoon, FaSun } from 'react-icons/fa'
 
 
+
 const Home = () => {
   // const [darkMode, setDarkMode] = useState(false)
 
@@ -27,7 +28,9 @@ const Home = () => {
     //   </div>
 
     // </div>
+
     <div   className='bannerMedia'>
+
 
       <Banner />
       <div>
@@ -39,3 +42,5 @@ const Home = () => {
 }
 
 export default Home
+
+

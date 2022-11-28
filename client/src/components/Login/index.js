@@ -90,9 +90,7 @@ export function Login (props) {
                       placeholder='Password'
                     />
                   </div>
-                  <a href='#' className='text-xs text-blue-600 hover:underline'>
-                    Forget Password?
-                  </a>
+                  
                   <div className='mt-6'>
                     <button
                       type='submit'
@@ -107,7 +105,7 @@ export function Login (props) {
                   {' '}
                   Don't have an account?{' '}
                   <a
-                    href='#'
+                    href='/'
                     className='font-medium text-blue-600 hover:underline'
                     onClick={e => showSignup(e)}
                   >

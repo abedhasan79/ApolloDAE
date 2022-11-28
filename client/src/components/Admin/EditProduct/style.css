@@ -1,46 +1,58 @@
-.editProductFrom{
+.editProductFrom {
     margin-top: 12vh;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
 }
 
-.formforedit{
+.formforedit {
     margin-top: 1vh;
 }
-.formforedit input{
+
+.formforedit input {
     margin-bottom: 1vh;
 }
-.formforedit textarea{
+
+.formforedit textarea {
     margin-bottom: 1vh;
 }
-.dltBtn{
+
+.dltBtn {
     text-align: center;
 }
 
 
-.adminarrow{
-    display:flex;
+.adminarrow {
+    display: flex;
     flex-wrap: wrap;
     font-size: 60px;
     color: rgb(75, 22, 22);
-   
+
 }
 
-.welcome h1{
+.welcome h1 {
     color: rgb(190, 35, 35);
-    font-size:20px;
-    
+    font-size: 20px;
+
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+.productDeletePage {
+    margin-top: 55.7vh;
+}
+
 @media screen and (max-width: 765px) {
-    .adminarrow{
-        display:flex;
+    .adminarrow {
+        display: flex;
         flex-wrap: wrap;
         margin-top: 9vh;
         font-size: 60px;
         color: rgb(75, 22, 22);
-  }
+    }
+
+    .productDeletePageTop {
+        margin-top: 3vh;
+    }
 }

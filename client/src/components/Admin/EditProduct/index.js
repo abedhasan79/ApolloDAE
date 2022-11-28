@@ -493,7 +493,7 @@ function EditProduct() {
               </div>
 
             </div>
-          ) : <Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link>}
+          ) : <div className='productDeletePageTop'><Link to="/admin">← Product has been deleted. Click here to go Back to Products</Link><div className='productDeletePage'></div></div>}
         </div>
       </>
     );

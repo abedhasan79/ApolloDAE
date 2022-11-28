@@ -223,12 +223,14 @@ body {
   }
 }
 
-@media screen and (max-width:430px) {
-  .bannerMedia {
-    margin-top: 10vh;
-  }
+
+.bannerMedia{
+  margin-top: 15vh;
 }
 
-.bannerMedia {
-  margin-top: 15vh;
+@media screen and (max-width: 420px) {
+  .bannerMedia{
+    margin-top:20vh;
+  }
+
 }

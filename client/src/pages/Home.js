@@ -4,12 +4,7 @@ import { Banner } from '../components/Banner'
 import { Testing } from "../components/Testing"
 import { FaMoon, FaSun } from 'react-icons/fa'
 
-// const style = {
-//   hw: {
-//     marginTop: '15vh',
-//   },
-  
-// }
+
 
 const Home = () => {
   // const [darkMode, setDarkMode] = useState(false)
@@ -33,7 +28,9 @@ const Home = () => {
     //   </div>
 
     // </div>
-    <div className="bannerMedia">
+
+    <div   className='bannerMedia'>
+
 
       <Banner />
       <div>

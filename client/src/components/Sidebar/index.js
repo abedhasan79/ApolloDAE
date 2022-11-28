@@ -65,11 +65,11 @@ const SideBar = () => {
         </button>
       )}
       <div
-        className={`top-0 right-0 fixed bg-sky-800 w-[23vw] h-full p-10 ${
+        className={`test3 top-0 right-0 fixed bg-sky-800 w-[23vw] h-full p-10 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } ease-in-out duration-300`}
       >
-        <h2 className=' test2 text-4xl text-white'>Shop by Department</h2>
+        <h2 className='test2 text-4xl text-white'>Shop by Department</h2>
         <ul class='mt-4 text-3xl cursor-pointer'>
           {categories.map(item => (
             <li

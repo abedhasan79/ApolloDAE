@@ -45,19 +45,17 @@ code {
 /**************/
 .dark-mode {
   --primary: #f7d775;
-  --bg-color: #000204;
   --bg-form: #42414d;
   --shadow: rgb(9, 27, 36);
-  --text-color: rgb(255, 255, 255);
+  --text-color: rgb(107, 234, 224);
   --background: url(../src/assets/dark.jpg);
 }
 
 .light-mode {
   --primary: #000000;
-  --bg-color: #fdfdfd;
   --bg-form: #f6f7f9;
   --shadow: #d0d0d0;
-  --text-color: rgb(0, 0, 0);
+  --text-color: rgb(255, 0, 0);
   --background: url(../src/assets/light2.jpg)
 }
 

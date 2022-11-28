@@ -1,7 +1,6 @@
 .detailContainer{
-    margin-top: 134px;
-    /* height: 45vh; */
-    /* background-color:#E8E8E8; */
+    margin-top: 100px;
+  
 }
 
 .singleProductImg{
@@ -12,6 +11,12 @@
 }
 
 
+@media screen and (min-width:815px) {
+    .detailContainer{
+        margin-bottom: 100px;
+       
+    }
+}
 
 .priceDesc{
 
@@ -51,12 +56,20 @@
 
 @media screen and (max-width:818px) {
     .detailContainer{
-        margin-top: 300px;
+        margin-top: 180px;
         /* display: flex;
         flex-wrap: wrap;
         flex-direction: column; */
     }
 }
+
+/* @media screen and (max-width: 817px){
+    .detailContainer{
+        margin-top: 134px;
+      
+    }
+} */
+
 
 @media screen and (max-width:818px) {
     .nameDesc{

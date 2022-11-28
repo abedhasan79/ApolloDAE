@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-
 import { QUERY_PRODUCTS, QUERY_USER } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
-
 import '../ProductList/style.css';
 import { Link } from "react-router-dom";
 import './style.css';

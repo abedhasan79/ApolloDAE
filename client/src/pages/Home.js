@@ -9,9 +9,6 @@ import { Testing } from "../components/Testing"
 const Home = () => {
 
   return (
-<<<<<<< HEAD
-    <div style={style.hw}>
-=======
     // <div
     //   className={
     //     darkMode ? 'app-container dark-mode' : 'app-container light-mode'
@@ -33,7 +30,6 @@ const Home = () => {
 
     <div   className='bannerMedia'>
 
->>>>>>> 3ff54084f135d73f2a42a42608f1c69c249a9e7e
 
       <Banner />
       <div>

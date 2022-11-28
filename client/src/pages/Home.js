@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ProductList from '../components/ProductList'
 import { Banner } from '../components/Banner'
 import { Testing } from "../components/Testing"
-import { FaMoon, FaSun } from 'react-icons/fa'
+
 
 
 
 const Home = () => {
-  // const [darkMode, setDarkMode] = useState(false)
 
   return (
     // <div

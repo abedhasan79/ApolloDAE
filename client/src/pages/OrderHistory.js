@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
+import './ordHist.css';
+import './admin.css';
 
-const style ={
-  margintop:{
-    marginTop:'10vh'
-  }
-}
 function OrderHistory() {
   const { data } = useQuery(QUERY_USER);
   let user;
@@ -19,22 +16,22 @@ function OrderHistory() {
 
   return (
     <>
-      <div className="container my-1" style={style.margintop}>
-        <Link to="/">← Back to Products</Link>
+      <div className=" container my-1" >
+        <Link className="adminContainer1" to="/"><i className="arrow fa-regular fa-square-caret-left"></i></Link>
 
         {user ? (
           <>
-            <h2>
+            <h2 className="userMessage">
               Order History for {user.firstName} {user.lastName}
             </h2>
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">
-                <h3>
+                <h3 className="dateNow">
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
-                <div className="flex-row">
+                <div className="placeRow1">
                   {order.products.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
+                    <div key={index} className=" my-2 card px-1 py-1">
                       <Link to={`/products/${_id}`}>
                         <img alt={name} src={`${image}`} />
                         <p>{name}</p>

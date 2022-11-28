@@ -13,10 +13,10 @@ export const Testing = () => {
     <div>
       <h1 className="glow" >Fashion of the Week</h1>
       <p style={{textAlign: "center"}}>Shop for clothes now!</p>
-      <div className='fadeimage'>
+      <div data-aos="fade-right" className='fadeimage'>
         <img src={MenFashion} />
       </div>
-      <div  className='fadeimage'>
+      <div data-aos="fade-left" className='fadeimage'>
         <img src={WomenFashion} />
       </div>
     </div>

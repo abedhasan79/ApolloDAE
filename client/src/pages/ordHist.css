@@ -1,29 +1,30 @@
-.placeRow1{
+.placeRow1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* margin-bottom: 150px; */
-    /* margin-top: 200px; */
+
 }
 
-.my-2{
-margin-right: calc(1rem);;
-margin-left: calc(1rem);;
+.my-2 {
+    margin-right: calc(1rem);
+    ;
+    margin-left: calc(1rem);
+    ;
 }
 
-.userMessage{
+.userMessage {
     position: relative;
     margin-top: 50px;
     display: flex;
-    /* width: fit-content; */
+
     justify-content: center;
-    /* flex-direction: column; */
-  line-height: 50px;
+
+    line-height: 50px;
     font-family: 'Nova Flat';
     font-size: 30px;
 }
 
-.dateNow{
+.dateNow {
     position: relative;
     display: flex;
     justify-content: center;
@@ -31,14 +32,14 @@ margin-left: calc(1rem);;
     font-size: 25px;
 }
 
-.adminContainer1{
+.adminContainer1 {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
 
 @media screen and (max-width:772px) {
-    .adminContainer1{
+    .adminContainer1 {
         display: flex;
         justify-content: center;
         margin-top: 220px;
@@ -47,22 +48,22 @@ margin-left: calc(1rem);;
 }
 
 @media screen and (min-width:772px) {
-    .adminContainer1{
+    .adminContainer1 {
         display: flex;
         justify-content: center;
         margin-top: 120px;
     }
 
 
-    .placeRow1{
+    .placeRow1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         margin-bottom: 98px;
-        /* margin-top: 200px; */
+
     }
 }
 
-.pushDown{
+.pushDown {
     margin-bottom: 44.3vh;
 }

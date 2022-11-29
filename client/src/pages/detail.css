@@ -1,53 +1,44 @@
-.detailContainer{
+.detailContainer {
     margin-top: 100px;
-  
+
 }
 
-.singleProductImg{
-    /* border: 2px solid red; */
+.singleProductImg {
     height: 557px;
-    
-    
+
+
 }
 
 
 @media screen and (min-width:815px) {
-    .detailContainer{
+    .detailContainer {
         margin-bottom: 100px;
-       
+
     }
 }
 
-.priceDesc{
-
-    /* border: 2px solid red; */
+.priceDesc {
     width: fit-content;
     display: block;
     margin-left: 20%;
     margin-top: 10%;
-    float:left; 
-    /* line-height: 50px; */
+    float: left;
 }
 
-/* .addtoCart{
-    
-} */
 
-.addThis{
-    
-    /* margin-right: 20px; */
-   
-    /* margin-left: 200px; */
-    
+
+.addThis {
+
     margin-right: 7px;
 }
-.deleteThis{
+
+.deleteThis {
     background-color: rgb(255, 49, 49);
     border-radius: 15px;
     width: 100px;
 }
 
-.linkBack{
+.linkBack {
     background-color: rgb(47, 174, 206);
     border-radius: 10px;
     width: 150px;
@@ -55,44 +46,36 @@
 
 
 @media screen and (max-width:818px) {
-    .detailContainer{
+    .detailContainer {
         margin-top: 180px;
-        /* display: flex;
-        flex-wrap: wrap;
-        flex-direction: column; */
+
     }
 }
 
-/* @media screen and (max-width: 817px){
-    .detailContainer{
-        margin-top: 134px;
-      
-    }
-} */
-
 
 @media screen and (max-width:818px) {
-    .nameDesc{
-        /* margin-top: 300px; */
+    .nameDesc {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    .row{
+
+    .row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%
     }
+
     .column {
         display: flex;
-       flex-direction: column;
-       flex-basis: 100%;
+        flex-direction: column;
+        flex-basis: 100%;
         flex: 1;
-      }
+    }
 }
 
-.row{
+.row {
     display: flex;
     max-width: 1400px;
 
@@ -101,85 +84,72 @@
 .column {
     flex: 50%;
     padding: 16px;
-    
-  }
 
-  .proddesc{
+}
+
+.proddesc {
     font-family: 'serif';
     font-size: 35px;
-    /* color: rgb(50, 55, 133); */
 }
 
-.prodName11{
+.prodName11 {
     font-family: 'Nova Flat';
     font-size: 50px;
-    /* color: rgb(18, 14, 26); */
 }
 
-.prodPrice{
+.prodPrice {
     font-family: 'serif';
     font-size: 35px;
     color: rgb(236, 20, 49);
 }
-.addtoCart{
+
+.addtoCart {
     font-family: 'serif';
     font-size: 16px;
     color: rgb(255, 255, 255);
 }
 
-
-
-/* new buttons */
-
-
-/* CSS */
 .button-30 {
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-  /* z-index: -1; */
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    touch-action: manipulation;
+    font-size: 18px;
 }
 
 .button-30:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
 .button-30:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
 }
 
 .button-30:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
 }
 
-.arrow{
+.arrow {
     font-size: 50px;
     color: rgb(158, 21, 21);
     margin-left: 10px;
@@ -188,48 +158,45 @@
 
 .button-40 {
     align-items: center;
-    appearance: none;
+
     background-color: #dcdcec;
     border-radius: 4px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     box-sizing: border-box;
     color: #030000;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "JetBrains Mono", monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;
     list-style: none;
-    overflow: hidden;
+   
     padding-left: 16px;
     padding-right: 16px;
-    position: relative;
+   
     text-align: left;
     text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
+    transition: box-shadow .15s, transform .15s;
     user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow,transform;
     font-size: 18px;
-    /* z-index: -1; */
-  }
-  
-  .button-40:focus {
+
+}
+
+.button-40:focus {
     box-shadow: #03ccaa 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  }
-  
-  .button-40:hover {
+}
+
+.button-40:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
     color: rgb(235, 48, 48);
     font-size: 20px;
-  }
-  
-  .button-40:active {
+}
+
+.button-40:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
-  }
+}

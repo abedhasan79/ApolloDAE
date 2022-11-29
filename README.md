@@ -5,6 +5,8 @@ ApolloDAE, your new favorite E-commerce website to shop at! Get the latest updat
 
 - [Technology](#technology)
 - [UserStory](#userstory)
+- [Desktop](#desktop)
+- [Mobile](#mobile)
 - [Wireframe](#wireframe)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
@@ -52,20 +54,22 @@ So that new users/existing users can shop with a smooth experience.
 - WHEN I login
 - THEN I have the option to add new items, update stock, and remove item from the website
 ```
+## Desktop
+
+![Alt text](/client/src/assets/desktopView.jpg "Final Look")
+
+## Mobile
+
+![Alt text](/client/src/assets/mobileCollaged.jpg "Final Look")
 
 ## Wireframe
 
 Wireframe is subject to change.
 
-![9e1cab820c6803e6089f29d6531dd485](https://user-images.githubusercontent.com/109758045/204072416-2a5f35b6-3dda-468a-a75a-585702b2c5df.png)
-![5b69aa4f3555dcea48907d2c3a4a1a00](https://user-images.githubusercontent.com/109758045/204072417-e3accce6-2a83-4cc0-a155-450ed491804d.png)
-![906e6a4baf97b3479b47d326240bb8d8](https://user-images.githubusercontent.com/109758045/204072418-9950d053-fdca-4683-9596-9ad3c9372b88.png)
-![0a7e92ef32530b39565dc1df3a2d9572](https://user-images.githubusercontent.com/109758045/204072419-b826bf76-6837-4a63-b284-8e65082f11bc.png)
-![67a5536b866a2ac7dae15acf5aa109e2 (1)](https://user-images.githubusercontent.com/109758045/204072420-8fa3ed0e-9c79-43ba-b015-1ae1afb4b260.png)
-![67a5536b866a2ac7dae15acf5aa109e2](https://user-images.githubusercontent.com/109758045/204072421-a3687ec6-76bb-4c65-b516-6e3fcb284bd4.png)
-![1d1af9dafa815c6dc7ea53a59608e606](https://user-images.githubusercontent.com/109758045/204072422-6885376d-1fb5-4c8b-ad25-bac4ee8bb520.png)
-![19b736a92d6e0c39c483f3f6d74de183](https://user-images.githubusercontent.com/109758045/204072423-96620202-4314-4247-87a9-772e0cfc6dff.png)
-![134b3beae5244505458298a93a38d83e](https://user-images.githubusercontent.com/109758045/204072424-e7cb25ea-c081-4753-8f6f-ee7c3e1f6bf9.png)
+![9e1cab820c6803e6089f29d6531dd485](https://user-images.githubusercontent.com/109758045/204072416-2a5f35b6-3dda-468a-a75a-585702b2c5df.png) 
+
+![67a5536b866a2ac7dae15acf5aa109e2 (1)](https://user-images.githubusercontent.com/109758045/204072420-8fa3ed0e-9c79-43ba-b015-1ae1afb4b260.png) 
+
 
 ## Roadmap
 ApolloDAE is a startup E-commerce website. Future updates will be added unless stated otherwise. ApolloDAE updates will soon include the following:
@@ -84,8 +88,7 @@ N/A
 To access ApolloDAE simply scroll down, there it will display a link url to the website or you can type in "..." in your url and it will direct you to the home page! User's will need to create an account before being able to checkout. After an account has been created, users can freely navigate shop as much as they want. Admin users can edit, create and delete products.
 
 Deployed Link:
-
-![apollodae](https://user-images.githubusercontent.com/109758045/204158428-9baffb0f-3389-4700-a6b6-e7917004f263.png)
+[click here](https://apollodae001.herokuapp.com/) To visit my ApolloDAE.
 
 ## Questions
 Feel free to contact us if you have any questions or concerns!
@@ -100,7 +103,7 @@ Feel free to contact us if you have any questions or concerns!
 
 - [Github Link](https://github.com/DianasJourney)
 
-**Esra Al**
+**Esra Al-Abduljabar**
 
 - [Github Link](https://github.com/EsraWameed)
 

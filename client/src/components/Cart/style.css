@@ -75,19 +75,18 @@
   }
 }
 
-@media screen and (max-width: 776px){
-.cart{
-top: 10px;
-background: white;
-left: 150px;
+@media screen and (max-width: 776px) {
+  .cart {
+    top: 10px;
+    background: white;
+    left: 150px;
+  }
 }
+
+@media screen and (max-width: 740px) {
+  .cart {
+    top: 10px;
+    background: white;
+    left: 30px;
+  }
 }
-  
-@media screen and (max-width: 740px){
-.cart{
-top: 10px;
-background: white;
-left: 30px;
-}
-}
-  

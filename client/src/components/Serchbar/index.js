@@ -21,10 +21,7 @@ const Searchbar = () => {
             if (e.target.value === "") return data.products
             return post.name.toLowerCase().includes(e.target.value.toLowerCase())
         })
-        // setstate({
-        //     query: e.target.value,
-        //     list: results
-        // })
+      
 
         if (searchWord === "") {
             setstate([]);
@@ -33,10 +30,7 @@ const Searchbar = () => {
         }
     }
     const clearField = () => {
-        // setstate({
-        //     query: "",
-        //     list: []
-        // });
+ 
         setstate([]);
         setquery("");
     }

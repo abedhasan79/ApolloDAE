@@ -13,7 +13,7 @@ export const Banner = () => {
 
   useEffect(() => {
     startBanner()
-  })
+  }, [])
 
   const startBanner = () => {
     setInterval(() => {

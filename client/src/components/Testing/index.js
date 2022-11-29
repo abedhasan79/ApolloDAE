@@ -14,10 +14,10 @@ export const Testing = () => {
       <h1 className="glow" >Fashion of the Week</h1>
       <p style={{textAlign: "center"}}>Shop for clothes now!</p>
       <div className='fadeimage'>
-        <img src={MenFashion} />
+        <img src={MenFashion} alt="men fasion"/>
       </div>
       <div  className='fadeimage'>
-        <img src={WomenFashion} />
+        <img src={WomenFashion} alt="women fasion"/>
       </div>
     </div>
   )

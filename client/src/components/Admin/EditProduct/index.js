@@ -11,12 +11,9 @@ import { EDIT_PRODUCT_DESCRIPTION, EDIT_PRODUCT_IMAGE, EDIT_PRODUCT_NAME, EDIT_P
 import { DELETE_PRODUCT } from '../../../utils/mutations';
 import './style.css'
 
-const style = {
-  MT: {
-    marginTop: '15vh'
-  }
-}
 
+
+// let's admin edit each property of a product. name description, price, quantity, iamge
 function EditProduct() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -158,12 +155,7 @@ function EditProduct() {
     }
   );
 
-  // const [formStateImage, setFormStateImage] = useState(
-  //   {
-  //     _id: '',
-  //     image:''
-  //   }
-  // );
+  
 
   const [imagee, setImagee] = useState("");
   const [url, setUrl] = useState("");

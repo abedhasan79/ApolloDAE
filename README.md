@@ -86,7 +86,9 @@ N/A
 
 ## Usage
 To access ApolloDAE simply scroll down, there it will display a link url to the website or you can type in "..." in your url and it will direct you to the home page! User's will need to create an account before being able to checkout. After an account has been created, users can freely navigate shop as much as they want. Admin users can edit, create and delete products.
-
+For Admin credientials use:
+Email: admin@apolodae.com
+Password: admindae
 Deployed Link:
 [click here](https://apollodae001.herokuapp.com/) To visit my ApolloDAE.
 

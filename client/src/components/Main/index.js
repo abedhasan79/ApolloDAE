@@ -37,7 +37,7 @@ export const Main = () => {
       <div>
         <img
           src='https://cdn.dribbble.com/users/1782673/screenshots/4683964/ezgif.com-video-to-gif__2_.gif'
-          style={{ width: '100%' }}
+          style={{ width: '100%' }} alt="loading img"
         ></img>
       </div>
     )

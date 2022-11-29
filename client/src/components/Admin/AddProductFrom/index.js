@@ -4,7 +4,7 @@ import { ADD_PRODUCT } from "../../../utils/mutations";
 import { QUERY_PRODUCTS } from "../../../utils/queries";
 import './style.css';
 
-
+//lets admins add a product
 const AddProductFrom = () => {
     const [formState, setFormState] = useState({ name: '', description: '', price: '', quantity: '', category: '' });
     const [addProduct, { error }] = useMutation(ADD_PRODUCT, {

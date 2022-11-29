@@ -12,90 +12,90 @@ export const Footer = () => {
         </a>
         <div class='md:flex md:justify-between'>
           <div class='mb-6 md:mb-0'>
-            <a href='#' class='flex items-center'>
+            <a href='/' className='flex items-center'>
               <img
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Byzantium_star_and_crescent.svg/1200px-Byzantium_star_and_crescent.svg.png'
                 class='mr-3 h-8'
                 alt='apollo logo'
               />
               <span class='self-center text-2xl font-semibold whitespace-nowrap'>
-                <a href="/"> <span class="text-white">Apollo</span><span class="text-blue-400">D</span><span class="text-purple-500">A</span><span class="text-fuchsia-300">E</span></a>
+                <a href="/"> <span className="text-white">Apollo</span><span className="text-blue-400">D</span><span className="text-purple-500">A</span><span className="text-fuchsia-300">E</span></a>
               </span>
             </a>
           </div>
-          <div class='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
+          <div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
             <div>
-              <h2 class='mb-6 text-sm font-semibold text-purple-400 uppercase'>
+              <h2 className='mb-6 text-sm font-semibold text-purple-400 uppercase'>
                 Resources
               </h2>
               <ul class='text-white '>
-                <li class='mb-4'>
-                  <a href='#' class='hover:underline'>
+                <li className='mb-4'>
+                  <a href='/' className='hover:underline'>
                     ApolloDAE
                   </a>
                 </li>
                 <li>
-                  <a href='https://tailwindcss.com/' class='hover:underline'>
+                  <a href='https://tailwindcss.com/' className='hover:underline'>
                     Tailwind CSS
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class='mb-6 text-sm font-semibold text-purple-400 uppercase'>
+              <h2 className='mb-6 text-sm font-semibold text-purple-400 uppercase'>
                 Follow us
               </h2>
-              <ul class='text-white'>
-                <li class='mb-4'>
+              <ul className='text-white'>
+                <li className='mb-4'>
                   <a
                     href='https://github.com/abedhasan79/ApolloDAE'
-                    class='hover:underline '
+                    className='hover:underline '
                   >
                     Github
                   </a>
                 </li>
                 <li>
-                  <a href='https://discord.gg/VQ4j7nRG' class='hover:underline'>
+                  <a href='https://discord.gg/VQ4j7nRG' className='hover:underline'>
                     Discord
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class='mb-6 text-sm font-semibold text-purple-400 uppercase'>
+              <h2 className='mb-6 text-sm font-semibold text-purple-400 uppercase'>
                 Legal
               </h2>
-              <ul class='text-white'>
-                <li class='mb-4'>
-                  <a href='#' class='hover:underline'>
+              <ul className='text-white'>
+                <li className='mb-4'>
+                  <p  className='hover:underline'>
                     <Privacy />
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a href='#' class='hover:underline'>
+                  <p  className='hover:underline'>
                     <Terms />
-                  </a>
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <hr class='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
-        <div class='sm:flex sm:items-center sm:justify-between'>
-          <span class='text-sm text-white sm:text-center dark:text-gray-400'>
+        <hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
+        <div className='sm:flex sm:items-center sm:justify-between'>
+          <span className='text-sm text-white sm:text-center dark:text-gray-400'>
             © 2022{' '}
-            <a href='/' class='hover:underline'>
+            <a href='/' className='hover:underline'>
               ApolloDAE™
             </a>
             . All Rights Reserved.
           </span>
-          <div class='flex mt-4 space-x-6 sm:justify-center sm:mt-0'>
+          <div className='flex mt-4 space-x-6 sm:justify-center sm:mt-0'>
             <a
-              href='#'
-              class='text-white-500 hover:text-white '
+              href='/'
+              className='text-white-500 hover:text-white '
             >
               <svg
-                class='w-5 h-5'
+                className='w-5 h-5'
                 fill='currentColor'
                 viewBox='0 0 24 24'
                 aria-hidden='true'
@@ -109,8 +109,8 @@ export const Footer = () => {
               <span class='sr-only'>Facebook page</span>
             </a>
             <a
-              href='#'
-              class='text-white-500 hover:text-gray-900 dark:hover:text-white'
+              href='/'
+              className='text-white-500 hover:text-gray-900 dark:hover:text-white'
             >
               <svg
                 class='w-5 h-5'
@@ -124,14 +124,14 @@ export const Footer = () => {
                   clip-rule='evenodd'
                 />
               </svg>
-              <span class='sr-only'>Instagram page</span>
+              <span className='sr-only'>Instagram page</span>
             </a>
             <a
-              href='#'
+              href='https://github.com/abedhasan79/ApolloDAE'
               class='text-white-500 hover:text-gray-900 dark:hover:text-white'
             >
               <svg
-                class='w-5 h-5'
+                className='w-5 h-5'
                 fill='currentColor'
                 viewBox='0 0 24 24'
                 aria-hidden='true'
@@ -142,12 +142,12 @@ export const Footer = () => {
                   clip-rule='evenodd'
                 />
               </svg>
-              <span class='sr-only'>GitHub account</span>
+              <span className='sr-only'>GitHub account</span>
             </a>
-            <a
+            {/* <a
               href='https://github.com/abedhasan79/ApolloDAE'
-              class='text-gray-500 hover:text-gray-900 dark:hover:text-white'
-            ></a>
+              className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
+            ></a> */}
           </div>
         </div>
       </footer>
